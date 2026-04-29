@@ -1,3 +1,19 @@
+export interface VisitInfo {
+  entry: string;
+  hours: string;
+  best_time: string;
+  accessibility: string;
+  duration_typical: string;
+}
+
+export interface StopImage {
+  url: string;
+  caption: string;
+  era: "historical" | "modern";
+  attribution: string;
+  license: string;
+}
+
 export interface Stop {
   id: string;
   name: string;
@@ -6,6 +22,8 @@ export interface Stop {
   lng: number;
   year_built?: number;
   themes: string[];
+  visit_info?: VisitInfo;
+  images?: StopImage[];
 }
 
 export interface Walk {

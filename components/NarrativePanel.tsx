@@ -9,6 +9,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import PathReasonerPanel from "@/components/PathReasonerPanel";
+import StopVisuals from "@/components/StopVisuals";
 
 type PipelineStage =
   | "idle"
@@ -69,7 +70,7 @@ export default function NarrativePanel({
         const res = await fetch("/api/narrate", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ walkId, stopId: stop.id, personaId }),
+          body: JSON.stringify({ walkId, stopId: stop.id, personaId, stops }),
         });
         if (!res.body) {
           if (!cancelled) setStage("idle");
@@ -100,6 +101,7 @@ export default function NarrativePanel({
             stopId: stop.id,
             personaId,
             narrative: fullText,
+            stops,
           }),
         });
         if (cancelled) return;
@@ -118,6 +120,7 @@ export default function NarrativePanel({
                 personaId,
                 revisionRequest: critData.revision_request,
                 previousNarrative: fullText,
+                stops,
               }),
             });
             if (revRes.body && !cancelled) {
@@ -168,7 +171,12 @@ export default function NarrativePanel({
 
       <div className="px-6 pb-8 flex-1 overflow-y-auto">
         {prevStop && (
-          <PathReasonerPanel walkId={walkId} fromStop={prevStop} toStop={stop} />
+          <PathReasonerPanel
+            walkId={walkId}
+            stops={stops}
+            fromStop={prevStop}
+            toStop={stop}
+          />
         )}
 
         <div className="py-5">
@@ -178,6 +186,9 @@ export default function NarrativePanel({
           <h2 className="serif text-4xl leading-tight">{stop.name}</h2>
           <p className="text-muted italic mt-1">{stop.subtitle}</p>
         </div>
+
+        {/* Visuals + visit info + voice */}
+        <StopVisuals stop={stop} narrativeText={text} />
 
         <hr className="divider-rule" />
 
@@ -211,9 +222,7 @@ export default function NarrativePanel({
   );
 }
 
-/* Render narrative with inline markdown (italic, bold, citations as small caps). */
 function NarrativeText({ text }: { text: string }) {
-  // Split paragraphs, render each with inline markdown.
   const paragraphs = text.split(/\n\n+/).filter((p) => p.trim().length > 0);
   return (
     <div className="narrative mt-4 space-y-4">
@@ -232,17 +241,11 @@ function renderInline(s: string): string {
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/_(.+?)_/g, "<em>$1</em>")
-    .replace(
-      /\[([^\]]+)\]/g,
-      '<span class="citation">[$1]</span>'
-    );
+    .replace(/\[([^\]]+)\]/g, '<span class="citation">[$1]</span>');
 }
 
 function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 function PipelineIndicator({ stage }: { stage: PipelineStage }) {

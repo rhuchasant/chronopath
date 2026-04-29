@@ -48,7 +48,7 @@ See [DECISIONS.md](./DECISIONS.md) for the architectural tradeoffs behind each c
 
 ## Source corpus
 
-The corpus is the project's actual moat. `corpus/sources.json` contains 14 hand-curated source snippets across 5 stops, with three integrity flags on every entry:
+The corpus is the project's actual moat. `corpus/sources.json` contains 24 hand-curated source snippets across 10 stops, with three integrity flags on every entry:
 
 - `source_type`: primary / secondary / colonial / oral
 - `verification_status`: `verified` (cross-checked against an accessible online source), `ai_drafted_unverified` (summarizes well-known historiography but specific phrasing not line-checked), or `user_added`
@@ -74,12 +74,12 @@ Next.js 15 · Anthropic Claude (only) · Theme-overlap retrieval (no embeddings 
 
 ## Limitations (stated honestly)
 
-- One walk, five stops, English only. Extending to multiple cities and Indian languages is the obvious next step.
-- Corpus is small (~14 sources). Some stops have only 2-3 entries, which constrains how rich the narrative can get without sliding into fabrication. The strict source-grounding is the safety net.
+- Two Pune walks, ten stops total, English only. Extending to multiple cities and Indian languages is the obvious next step.
+- Corpus is still small (~24 sources). Some stops have only 2-3 entries, which constrains how rich the narrative can get without sliding into fabrication. The strict source-grounding is the safety net.
 - Eval harness uses LLM-as-judge with same-family models. Useful for relative model comparison; not a substitute for human evaluation or cross-family validation.
 - No real GPS or geofencing — the walk is a click-through map experience. Real mobile + offline + dead-zone handling was descoped from the original brief in favor of getting the AI engineering right.
 - Path-reasoner can over-confidently rationalize. The `confidence` and `uncertainty_notes` fields in its output are the mitigation; both are visibly surfaced in the UI.
-- Theme-overlap retrieval is simple. At ~14 sources it works well; past ~100 sources, hybrid BM25 + dense retrieval (e.g. Voyage embeddings) is the upgrade path.
+- Theme-overlap retrieval is simple. At ~24 sources it works well; past ~100 sources, hybrid BM25 + dense retrieval (e.g. Voyage embeddings) is the upgrade path.
 
 ## What I'd build next
 

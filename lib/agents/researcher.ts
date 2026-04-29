@@ -11,10 +11,6 @@ import { getSourcesForStop } from "@/lib/data";
  *   3. A diversity bonus to preserve at least one source per source_type
  *      so the storyteller sees primary, colonial, and post-colonial
  *      perspectives where they exist.
- *
- * "Future work: hybrid BM25 + dense retrieval with Voyage embeddings"
- * goes in DECISIONS.md and the README — the upgrade path is clear when
- * the corpus grows past ~100 sources.
  */
 export async function retrieveSources(
   stopId: string,
@@ -33,8 +29,6 @@ export async function retrieveSources(
   );
 
   // Primary signal: theme co-occurrence within the stop's source set.
-  // Themes that appear across multiple sources are core to the stop;
-  // themes unique to one source are still useful but specialised.
   const themeFreq = new Map<string, number>();
   for (const s of all) {
     for (const t of s.themes) themeFreq.set(t, (themeFreq.get(t) ?? 0) + 1);
@@ -43,14 +37,14 @@ export async function retrieveSources(
   const scored = all.map((s: Source) => {
     const reasons: string[] = [];
 
-    // 1. Theme weight — sources covering core themes get higher base score
+    // 1. Theme weight
     const themeScore = s.themes.reduce(
       (acc, t) => acc + (themeFreq.get(t) ?? 0),
       0
     ) / Math.max(s.themes.length, 1);
     if (themeScore > 1.5) reasons.push(`covers core themes (${s.themes.slice(0, 2).join(", ")})`);
 
-    // 2. Lexical hits against persona directive
+    // 2. Lexical hits
     let lex = 0;
     const contentLower = s.content.toLowerCase();
     for (const tok of directiveTokens) {
@@ -58,7 +52,7 @@ export async function retrieveSources(
     }
     if (lex > 0) reasons.push(`matches persona directive (${lex} hits)`);
 
-    // 3. Verified sources get a small trust boost
+    // 3. Verified sources boost
     const trustBoost = s.verification_status === "verified" ? 0.5 : 0;
     if (trustBoost > 0) reasons.push("verification: verified");
 
@@ -72,8 +66,7 @@ export async function retrieveSources(
   // Sort by score desc
   scored.sort((a, b) => b.score - a.score);
 
-  // Diversity preservation: ensure each source_type present in the
-  // corpus appears at least once in the retrieved set when possible.
+  // Diversity preservation
   const selected: RetrievedSource[] = [];
   const seenTypes = new Set<string>();
   for (const s of scored) {
@@ -83,7 +76,7 @@ export async function retrieveSources(
       seenTypes.add(s.source_type);
     }
   }
-  // Fill remaining slots from the highest-scored leftovers
+  // Fill remaining slots
   for (const s of scored) {
     if (selected.length >= topK) break;
     if (!selected.includes(s)) selected.push(s);

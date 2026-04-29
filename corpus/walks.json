@@ -16,7 +16,30 @@
           "lat": 18.5195,
           "lng": 73.8553,
           "year_built": 1732,
-          "themes": ["peshwa-administration", "fire-of-1828", "anglo-maratha-wars", "architecture"]
+          "themes": ["peshwa-administration", "fire-of-1828", "anglo-maratha-wars", "architecture"],
+          "visit_info": {
+            "entry": "₹25 Indian / ₹300 foreigner",
+            "hours": "8:00 AM – 6:30 PM",
+            "best_time": "Early morning to avoid crowds and Pune heat",
+            "accessibility": "Limited — uneven stone, steps, no ramps",
+            "duration_typical": "45–60 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Old_Citadel_know_as_Shaniwar_Wada%2CPune.jpg",
+              "caption": "Archival image of Shaniwar Wada from older Pune",
+              "era": "historical",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Front_view_of_Shaniwar_Wada_illuminated.jpg/1280px-Front_view_of_Shaniwar_Wada_illuminated.jpg",
+              "caption": "Shaniwar Wada today",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
         },
         {
           "id": "lal-mahal",
@@ -25,7 +48,23 @@
           "lat": 18.5181,
           "lng": 73.8559,
           "year_built": 1630,
-          "themes": ["shivaji", "shaista-khan-raid", "maratha-origins"]
+          "themes": ["shivaji", "shaista-khan-raid", "maratha-origins"],
+          "visit_info": {
+            "entry": "Free",
+            "hours": "9:00 AM – 5:30 PM",
+            "best_time": "Weekdays — weekends bring school groups",
+            "accessibility": "Mostly accessible; one short flight of stairs",
+            "duration_typical": "20–30 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Lal_Mahal%2C_Pune.jpg/1280px-Lal_Mahal%2C_Pune.jpg",
+              "caption": "Lal Mahal precinct in present-day Pune",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
         },
         {
           "id": "kasba-ganpati",
@@ -34,7 +73,23 @@
           "lat": 18.5200,
           "lng": 73.8560,
           "year_built": 1640,
-          "themes": ["jijabai", "religious-foundation", "ganesh-festival-origin"]
+          "themes": ["jijabai", "religious-foundation", "ganesh-festival-origin"],
+          "visit_info": {
+            "entry": "Free (active temple — observe respectful conduct)",
+            "hours": "5:30 AM – 10:00 PM",
+            "best_time": "Early morning aarti (~5:45 AM) or evening aarti (~7:30 PM)",
+            "accessibility": "Step at entrance; otherwise level",
+            "duration_typical": "15–20 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg/1280px-Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg",
+              "caption": "Kasba Ganpati today",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
         },
         {
           "id": "vishrambaug-wada",
@@ -43,7 +98,23 @@
           "lat": 18.5152,
           "lng": 73.8559,
           "year_built": 1807,
-          "themes": ["bajirao-ii", "decline-of-peshwas", "british-takeover"]
+          "themes": ["bajirao-ii", "decline-of-peshwas", "british-takeover"],
+          "visit_info": {
+            "entry": "₹5 (Pune Municipal museum section)",
+            "hours": "10:30 AM – 5:30 PM (Mon closed)",
+            "best_time": "Afternoon — lighting favors the carved teak interior",
+            "accessibility": "Ground floor accessible; upper floor stairs only",
+            "duration_typical": "30–45 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Vishram_Baug_Wada.jpg/1280px-Vishram_Baug_Wada.jpg",
+              "caption": "Vishrambaug Wada facade today",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
         },
         {
           "id": "phule-wada",
@@ -52,7 +123,159 @@
           "lat": 18.5141,
           "lng": 73.8480,
           "year_built": 1852,
-          "themes": ["social-reform", "first-girls-school", "anti-caste-movement", "savitribai"]
+          "themes": ["social-reform", "first-girls-school", "anti-caste-movement", "savitribai"],
+          "visit_info": {
+            "entry": "Free",
+            "hours": "10:00 AM – 5:00 PM (Sun closed)",
+            "best_time": "Weekday afternoons — quiet, contemplative",
+            "accessibility": "Ground floor accessible",
+            "duration_typical": "30 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pune_West_skyline_-_March_2017.jpg/1280px-Pune_West_skyline_-_March_2017.jpg",
+              "caption": "Present-day Pune cityscape around the Phule Wada context",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pune-food-legacy",
+      "title": "Pune Food Legacy",
+      "subtitle": "A walking trail through the city's iconic eats",
+      "era": "1890 – Present",
+      "duration_min": 70,
+      "distance_km": 4.2,
+      "description": "Five legendary food stops across old and central Pune, from century-old Irani cafes to beloved snack institutions, tracing how migration, mills, students, and neighborhood culture shaped what the city eats.",
+      "stops": [
+        {
+          "id": "vaishali-fc-road",
+          "name": "Vaishali",
+          "subtitle": "FC Road's South Indian institution",
+          "lat": 18.5207,
+          "lng": 73.8419,
+          "year_built": 1951,
+          "themes": ["udupi-cafe-culture", "student-city", "post-independence-urban-food"],
+          "visit_info": {
+            "entry": "Free (pay per order)",
+            "hours": "7:00 AM – 11:00 PM",
+            "best_time": "Early breakfast or late evening to avoid peak queues",
+            "accessibility": "Street-level entry; can be crowded during rush hours",
+            "duration_typical": "30–45 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Rameshwaram_Cafe_Dosa.jpg/1280px-Rameshwaram_Cafe_Dosa.jpg",
+              "caption": "Vaishali and FC Road cafe culture today",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
+        },
+        {
+          "id": "cafe-goodluck",
+          "name": "Cafe Goodluck",
+          "subtitle": "Irani cafe memory on Fergusson Road",
+          "lat": 18.5193,
+          "lng": 73.8415,
+          "year_built": 1935,
+          "themes": ["irani-cafe-heritage", "bun-maska-chai", "deccan-modernity"],
+          "visit_info": {
+            "entry": "Free (pay per order)",
+            "hours": "7:00 AM – 11:30 PM",
+            "best_time": "Mid-morning for easier seating",
+            "accessibility": "Ground floor seating; compact aisles during peak hours",
+            "duration_typical": "25–40 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Yazdani_Bakery_in_Fort.jpg/1280px-Yazdani_Bakery_in_Fort.jpg",
+              "caption": "Cafe Goodluck and Deccan cafe life today",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
+        },
+        {
+          "id": "bedekar-misal",
+          "name": "Bedekar Misal",
+          "subtitle": "The old-city misal benchmark",
+          "lat": 18.5119,
+          "lng": 73.8482,
+          "year_built": 1948,
+          "themes": ["misal-pav", "working-class-food", "spice-identity"],
+          "visit_info": {
+            "entry": "Free (pay per order)",
+            "hours": "8:30 AM – 2:30 PM, 5:00 PM – 8:30 PM",
+            "best_time": "Before noon; batches often sell out early",
+            "accessibility": "Narrow approach lanes and limited seating",
+            "duration_typical": "20–30 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kolhapuri_Misal_Pav.jpg/1280px-Kolhapuri_Misal_Pav.jpg",
+              "caption": "Misal pav plating associated with old-city Pune",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
+        },
+        {
+          "id": "chitale-bandhu",
+          "name": "Chitale Bandhu",
+          "subtitle": "Bakarwadi and farsan icon of Sadashiv Peth",
+          "lat": 18.5106,
+          "lng": 73.8492,
+          "year_built": 1950,
+          "themes": ["snack-industrialization", "bakarwadi", "festival-food-economy"],
+          "visit_info": {
+            "entry": "Free (pay per purchase)",
+            "hours": "9:00 AM – 8:30 PM",
+            "best_time": "Late morning on weekdays to avoid festival crowds",
+            "accessibility": "Street-level shopfront; queue system at busy times",
+            "duration_typical": "20–35 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Bhakarwadi.JPG/1280px-Bhakarwadi.JPG",
+              "caption": "Packaged bakarwadi and Pune snack culture today",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
+        },
+        {
+          "id": "kayani-bakery",
+          "name": "Kayani Bakery",
+          "subtitle": "Shrewsbury biscuits and Pune's Parsi baking legacy",
+          "lat": 18.5047,
+          "lng": 73.8838,
+          "year_built": 1955,
+          "themes": ["parsi-bakery", "colonial-cantonment-food", "shrewsbury-biscuit"],
+          "visit_info": {
+            "entry": "Free (pay per purchase)",
+            "hours": "7:30 AM – 1:00 PM, 3:30 PM – 8:00 PM",
+            "best_time": "Early opening hours for freshest bakes and shorter lines",
+            "accessibility": "Single-step entrance; tight indoor space",
+            "duration_typical": "20–30 minutes"
+          },
+          "images": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Shortbread_House_round_biscuit_.jpg/1280px-Shortbread_House_round_biscuit_.jpg",
+              "caption": "Kayani-style bakery shelves and biscuit culture today",
+              "era": "modern",
+              "attribution": "Wikimedia Commons",
+              "license": "See source file on Wikimedia Commons"
+            }
+          ]
         }
       ]
     }

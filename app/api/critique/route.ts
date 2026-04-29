@@ -5,19 +5,21 @@ import {
   criticUserPrompt,
 } from "@/lib/agents/critic";
 import { getPersona, getWalk } from "@/lib/data";
-import type { Critique } from "@/lib/types";
+import type { Critique, Stop } from "@/lib/types";
 import { NextRequest } from "next/server";
 
 export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
-  const { walkId, stopId, personaId, narrative } = await req.json();
+  const { walkId, stopId, personaId, narrative, stops } = await req.json();
 
   const walk = getWalk(walkId);
   const persona = getPersona(personaId);
-  const stop = walk?.stops.find((s) => s.id === stopId);
+  const runtimeStops = ((Array.isArray(stops) ? stops : []) as Stop[]);
+  const stop = walk?.stops.find((s) => s.id === stopId) ??
+    runtimeStops.find((s) => s.id === stopId);
 
-  if (!walk || !persona || !stop || !narrative) {
+  if (!persona || !stop || !narrative) {
     return new Response("bad request", { status: 400 });
   }
 

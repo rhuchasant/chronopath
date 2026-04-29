@@ -1,8 +1,11 @@
 import { getWalks } from "@/lib/data";
+import { getAllStopsWithSourceCoverage } from "@/lib/route-builder";
 import Link from "next/link";
+import RouteBuilderForm from "@/components/RouteBuilderForm";
 
 export default function HomePage() {
   const walks = getWalks();
+  const availableStops = getAllStopsWithSourceCoverage();
 
   return (
     <main className="min-h-screen px-6 py-16 md:py-24 max-w-3xl mx-auto">
@@ -18,6 +21,8 @@ export default function HomePage() {
           mattered, grounded in primary sources.
         </p>
       </header>
+
+      <RouteBuilderForm stops={availableStops} />
 
       <section>
         <p className="eyebrow mb-4">Available walks</p>

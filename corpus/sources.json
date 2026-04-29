@@ -173,6 +173,126 @@
       "bias_notes": "Accounts of stones, dung, and verbal abuse hurled at Savitribai on her walks to school appear consistently across Marathi biographies and modern feminist histories. They are well-attested as pattern, though specific incidents are not always traceable to contemporary primary sources. The pattern is widely accepted; individual incident-level claims should be treated with appropriate care.",
       "content": "The Phules' work was met with active hostility from segments of Pune's orthodox Brahmin society. Savitribai famously carried a spare sari with her on the walk to school, replacing the one soiled by stones, mud, or cow dung thrown at her along the way. The Phule family was ostracised by their own community and eventually relocated parts of their teaching work — for a time, to the residence of their friend Usman Sheikh, where Fatima Sheikh, Usman's sister, became one of India's first Muslim women teachers. The cross-religious composition of the Phules' inner circle of co-educators (Hindu, Muslim, and Dalit) was not incidental but a deliberate model of the casteless society they were trying to make.",
       "themes": ["resistance-to-reform", "savitribai", "fatima-sheikh", "interfaith-collaboration"]
+    },
+    {
+      "id": "vf-001",
+      "stop_id": "vaishali-fc-road",
+      "source_type": "secondary",
+      "source_name": "Popular histories of Vaishali and FC Road food culture",
+      "year": 1951,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Narratives around Vaishali often foreground nostalgia of middle-class student life and can understate the labor systems and kitchen networks that sustained this cafe ecosystem.",
+      "content": "Vaishali began in 1951 and grew into one of Pune's most recognizable cafes on Fergusson College Road. It is widely associated with the Udupi-influenced vegetarian menu that became central to post-independence urban eating in western India: dosas, idlis, filter coffee, and quick-serve tiffin formats. Its location near major colleges helped define it as a student and young-professional meeting point, where affordability, speed, and social familiarity mattered as much as cuisine. The institution's cultural role now exceeds food alone: in Pune memory, 'meeting at Vaishali' functions as a civic shorthand for youth culture across generations.",
+      "themes": ["udupi-cafe-culture", "student-city", "post-independence-urban-food"]
+    },
+    {
+      "id": "vf-002",
+      "stop_id": "vaishali-fc-road",
+      "source_type": "oral",
+      "source_name": "Contemporary local memory of Vaishali queues and rituals",
+      "year": 2024,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Oral accounts privilege emotional memory and social ritual over verifiable chronology; useful for lived culture, weak for exact institutional timeline.",
+      "content": "Current Pune residents often describe Vaishali as a rite of passage: first-year college breakfasts, post-exam coffee, and weekend queue culture that marks belonging to the city. Menu favorites become identity markers, and waiting in line is treated as part of the experience rather than a friction point. This living memory demonstrates how a food venue turns into an urban social institution, where repetition creates community memory across linguistic and class boundaries, even as the neighborhood around FC Road commercialized rapidly.",
+      "themes": ["student-city", "urban-memory", "cafe-as-public-space"]
+    },
+    {
+      "id": "cg-001",
+      "stop_id": "cafe-goodluck",
+      "source_type": "secondary",
+      "source_name": "General documentation of Irani cafes in western India",
+      "year": 1935,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Irani cafe histories can romanticize decline and erase regional adaptation; many cafes actively changed menus and clientele to survive.",
+      "content": "Cafe Goodluck, established in the 1930s on Fergusson Road, is one of Pune's most enduring Irani cafe landmarks. Irani cafes in India emerged through Zoroastrian migrant entrepreneurship and became democratic urban spaces: inexpensive tea, bread-based staples, and shared seating where students, workers, artists, and office-goers mingled. Goodluck's signature associations — bun maska, chai, and keema-era cafe memory — place it within a larger subcontinental story of migration, adaptation, and everyday secular public life. In Pune, it also marks the Deccan area's transition from colonial-era edge district to modern educational-commercial core.",
+      "themes": ["irani-cafe-heritage", "bun-maska-chai", "deccan-modernity"]
+    },
+    {
+      "id": "cg-002",
+      "stop_id": "cafe-goodluck",
+      "source_type": "oral",
+      "source_name": "Pune oral memory of Deccan's changing cafe scene",
+      "year": 2024,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Nostalgic framing can overstate continuity and understate how menu, pricing, and clientele changed over decades.",
+      "content": "In local memory, Goodluck represents an earlier Pune tempo: slower table conversations, notebook-writing students, and intergenerational regulars sharing the same room. Residents often compare it with newer cafes to describe what was lost and what survived in Deccan's transformation. The memory is selective but historically useful: it shows how food venues become narrative anchors for urban change, allowing people to map social shifts through what and where they eat.",
+      "themes": ["irani-cafe-heritage", "urban-memory", "deccan-modernity"]
+    },
+    {
+      "id": "bm-001",
+      "stop_id": "bedekar-misal",
+      "source_type": "secondary",
+      "source_name": "Regional food histories of misal in Maharashtra",
+      "year": null,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Accounts of who 'invented' misal vary by city and are often identity-driven; better read as a family of evolving dishes rather than a single-origin claim.",
+      "content": "Misal is a layered Maharashtrian dish built from usal, farsan, and spicy kat, served with pav and regionally variable garnish. Pune's old-city versions, including those associated with Bedekar Misal, are known for balance between heat, crunch, and depth rather than sheer spice alone. The dish became emblematic of affordable, high-energy urban eating, especially for clerical workers, traders, and students. Its spread across neighborhoods tracks the city's working-day rhythms: breakfast rushes, short lunch windows, and loyalty to neighborhood-specific recipes.",
+      "themes": ["misal-pav", "working-class-food", "spice-identity"]
+    },
+    {
+      "id": "bm-002",
+      "stop_id": "bedekar-misal",
+      "source_type": "oral",
+      "source_name": "Local comparative memory of old Pune misal houses",
+      "year": 2024,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Taste memory is subjective and often framed as rivalry; useful for social meaning, not objective culinary ranking.",
+      "content": "Punekars frequently discuss Bedekar in comparative conversations with other classic misal spots, using vocabulary of 'kat strength,' 'balance,' and 'authentic texture.' These debates act as neighborhood identity performance as much as food criticism. The ritual of recommending a preferred misal house to visitors demonstrates how everyday dishes function as civic ambassadors in Pune's food culture.",
+      "themes": ["misal-pav", "spice-identity", "urban-memory"]
+    },
+    {
+      "id": "cb-001",
+      "stop_id": "chitale-bandhu",
+      "source_type": "secondary",
+      "source_name": "Company and regional accounts of Chitale farsan culture",
+      "year": 1950,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Brand narratives understandably emphasize quality and heritage; independent economic data is needed for stronger claims about scale and market share.",
+      "content": "Chitale Bandhu emerged in mid-20th-century Pune and became synonymous with packaged snacks like bakarwadi and shrikhand in the city's festival and gifting economy. The enterprise reflects a broader shift from neighborhood halwai production toward standardized, branded farsan supply that could travel beyond local peth markets. In Pune's social life, these snack boxes are tied to travel rituals, festive exchange, and diaspora nostalgia, extending the city's taste identity to national and global circuits.",
+      "themes": ["snack-industrialization", "bakarwadi", "festival-food-economy"]
+    },
+    {
+      "id": "cb-002",
+      "stop_id": "chitale-bandhu",
+      "source_type": "oral",
+      "source_name": "Pune household memory of bakarwadi as default gift food",
+      "year": 2024,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Household-level narratives can universalize middle-class practices that may not represent all communities equally.",
+      "content": "Many Pune families describe bakarwadi from Chitale as the 'safe default' for guests, train journeys, and festival dispatches to relatives outside the city. The product's portability and shelf life made it ideal for post-1960 mobility patterns, where food carried emotional continuity across migration. This memory positions snack commerce as a quiet archive of social change: mobility, gifting norms, and the packaging of regional identity.",
+      "themes": ["bakarwadi", "festival-food-economy", "urban-memory"]
+    },
+    {
+      "id": "kb-001",
+      "stop_id": "kayani-bakery",
+      "source_type": "secondary",
+      "source_name": "Accounts of Pune cantonment bakeries and Parsi enterprises",
+      "year": 1955,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Cantonment food histories can over-center elite military consumption and understate everyday local patronage that sustained these bakeries.",
+      "content": "Kayani Bakery in Camp is one of Pune's best-known Parsi-run baking establishments, famed for Shrewsbury biscuits and old-style tea cakes. Its location in the former cantonment zone links it to layered food exchange between colonial military geographies, local markets, and post-independence civilian expansion. The bakery's enduring popularity demonstrates how specialized baked goods became part of Pune's broader identity, not confined to one community or district.",
+      "themes": ["parsi-bakery", "colonial-cantonment-food", "shrewsbury-biscuit"]
+    },
+    {
+      "id": "kb-002",
+      "stop_id": "kayani-bakery",
+      "source_type": "oral",
+      "source_name": "Contemporary queue culture around Camp bakery visits",
+      "year": 2024,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Queue stories are vivid but anecdotal; they capture social significance better than quantitative demand patterns.",
+      "content": "Visitors frequently describe a Kayani run as a timed ritual: arrive before stock thins, stand in line, and carry boxes back as edible souvenirs. For many residents, this mirrors how Camp itself is remembered — distinct from old peth Pune yet deeply entangled with it through food circuits. The bakery therefore operates as both a retail site and a memory checkpoint in the city's map of taste.",
+      "themes": ["shrewsbury-biscuit", "urban-memory", "colonial-cantonment-food"]
     }
   ]
 }

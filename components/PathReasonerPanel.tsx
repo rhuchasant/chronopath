@@ -6,10 +6,12 @@ import { ArrowRight, Loader2, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function PathReasonerPanel({
   walkId,
+  stops,
   fromStop,
   toStop,
 }: {
   walkId: string;
+  stops: Stop[];
   fromStop: Stop;
   toStop: Stop;
 }) {
@@ -34,6 +36,7 @@ export default function PathReasonerPanel({
           walkId,
           fromStopId: fromStop.id,
           toStopId: toStop.id,
+          stops,
         }),
       });
       const data = await res.json();
