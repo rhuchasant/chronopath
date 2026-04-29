@@ -3,7 +3,7 @@
 > An AI system that walks you through historic Pune as a digital ancestor — adapting the story to who's listening, reasoning about why historic paths mattered, and grounded in a curated corpus of primary sources with explicit bias annotations.
 
 **Live demo:** https://chronopath-vercel.vercel.app/
-**Loom:** _(90-second walkthrough — link goes here once recorded)_
+**Loom:** [90-second system walkthrough](https://www.loom.com/share/4e25ac6a0c014c3bb1cbb3bd435656de)
 **Eval report:** https://chronopath-vercel.vercel.app/evals
 
 ---
