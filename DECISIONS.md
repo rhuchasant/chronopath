@@ -9,6 +9,7 @@ A running log of non-trivial design choices and their tradeoffs. Read top-down â
 **Decision:** Four distinct agents â€” Researcher, Storyteller, Critic, Path-Reasoner â€” instead of one large prompt that does everything.
 
 **Why:** Single-prompt systems hide failure modes. With separate agents we can:
+
 - Evaluate the storyteller without the retrieval being a confound
 - Run the critic on outputs from different generator models in our eval harness
 - Replace any single agent (e.g. swap retrieval to a real vector DB) without touching others
@@ -42,9 +43,9 @@ A running log of non-trivial design choices and their tradeoffs. Read top-down â
 
 ## D4 Â· Persona-conditioned generation, not just translation
 
-**Decision:** Personas have a `prompting_profile` field that instructs the storyteller on *what kind of analogical work* to do, not just tone or vocabulary.
+**Decision:** Personas have a `prompting_profile` field that instructs the storyteller on _what kind of analogical work_ to do, not just tone or vocabulary.
 
-**Why:** "Explain like I'm five" is not the same as cultural bridging. An Italian visitor benefits most from a *structural* analogy ("the Peshwa-British relationship maps onto Medici-Habsburg dynamics") â€” the work is finding the right mapping, not simplifying the language. Tone-only personas produce condescending output.
+**Why:** "Explain like I'm five" is not the same as cultural bridging. An Italian visitor benefits most from a _structural_ analogy ("the Peshwa-British relationship maps onto Medici-Habsburg dynamics") â€” the work is finding the right mapping, not simplifying the language. Tone-only personas produce condescending output.
 
 ---
 
@@ -52,9 +53,10 @@ A running log of non-trivial design choices and their tradeoffs. Read top-down â
 
 **Decision:** Use a held-out Claude model (different from the generator) as the eval judge, rather than Claude-as-its-own-judge or a separate-family model.
 
-**Why:** Hand-scoring 40 narratives across 4 personas is intractable in this timeline. LLM-as-judge is well-studied and reasonable for *relative* model comparisons. Using a *different model within Claude family* reduces self-preference bias compared to same-model judging, while keeping the stack on a single provider.
+**Why:** Hand-scoring 40 narratives across 4 personas is intractable in this timeline. LLM-as-judge is well-studied and reasonable for _relative_ model comparisons. Using a _different model within Claude family_ reduces self-preference bias compared to same-model judging, while keeping the stack on a single provider.
 
 **Caveats (stated openly in README and `evals/report.md`):**
+
 - Absolute scores are not meaningful, only ranking is
 - All judges share Claude's family-level biases (cross-family validation is future work)
 - Judge inherits biases toward verbose, hedged outputs
@@ -66,7 +68,7 @@ A running log of non-trivial design choices and their tradeoffs. Read top-down â
 
 **Decision:** Sources are pre-curated into `corpus/sources.json` rather than scraped at request time.
 
-**Why:** Live scraping at request time is fragile (sites change), slow (adds seconds to every narrative), legally murky (some sources don't allow scraping), and pedagogically wrong (the system would only be as good as the first Wikipedia paragraph). Pre-curation is the project. Scraping happens *once*, with attribution and bias annotation by hand.
+**Why:** Live scraping at request time is fragile (sites change), slow (adds seconds to every narrative), legally murky (some sources don't allow scraping), and pedagogically wrong (the system would only be as good as the first Wikipedia paragraph). Pre-curation is the project. Scraping happens _once_, with attribution and bias annotation by hand.
 
 ---
 
@@ -79,3 +81,19 @@ A running log of non-trivial design choices and their tradeoffs. Read top-down â
 ---
 
 <!-- Add new decisions here as they come up. Every architectural fork gets a D-entry. -->
+
+## D8 Â· Counter-intuitive eval finding: smaller model outperforms larger on factual accuracy
+
+**Observed:** In our 10-prompt Ã— 2-model eval (see `evals/report.md`), Claude Haiku 4.5 scored 14.10/20 average vs Claude Sonnet 4.5's 13.30/20. Sonnet won on persona-fit (4.5 vs 4.2) but lost on factual accuracy (2.5 vs 3.1) and bias-awareness (2.9 vs 3.3). Sonnet's narratives triggered revision in 10/10 cases; Haiku's in 6/10.
+
+**Interpretation:** Sonnet writes more vividly but extends beyond the corpus more often, adding plausible-sounding unsourced specifics. Haiku produces plainer narratives that stay closer to the provided sources. The critic consistently catches Sonnet's over-extension.
+
+**Implication for production:** Default to Haiku for source-grounded narrative generation; reserve Sonnet for cases where vividness outweighs strict factuality (e.g., children's narratives where minor reasonable embellishment is acceptable). Or: feed Sonnet's drafts through the critic + revision loop, which the system already does.
+
+**Caveats:**
+
+- n=10 prompts, single judge per generation. Stronger conclusions require more runs and averaging.
+- LLM-as-judge introduces its own biases; cross-family validation needed before this finding is trusted in absolute terms.
+- The result may not generalize to other corpora â€” it reflects how these two models handle this specific source set with these specific persona directives.
+
+This finding is the kind of thing the eval harness was built to surface.

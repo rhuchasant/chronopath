@@ -1,83 +1,112 @@
 # ChronoPath
 
-> An AI system that walks you through historic Pune as a digital ancestor — adapting the story to who's listening, reasoning about why historic paths mattered, and grounded in a curated corpus of primary sources.
+> An AI system that walks you through historic Pune as a digital ancestor — adapting the story to who's listening, reasoning about why historic paths mattered, and grounded in a curated corpus of primary sources with explicit bias annotations.
 
-**Live demo:** _(deploy URL goes here)_
-**Loom:** _(90-second walkthrough goes here)_
+**Live demo:** https://chronopath-vercel.vercel.app/
+**Loom:** _(90-second walkthrough — link goes here once recorded)_
+**Eval report:** https://chronopath-vercel.vercel.app/evals
 
 ---
 
 ## Why this exists
 
-Most "AI tour guide" projects are an LLM call wrapped around Wikipedia. ChronoPath is not that. It is an attempt to build a small but genuinely AI-native system: a multi-agent pipeline with persona-conditioned reasoning, source-bias awareness, and a measurable eval harness.
+Most "AI tour guide" projects are an LLM call wrapped around Wikipedia. ChronoPath is a small but genuinely AI-native system: a multi-agent pipeline with persona-conditioned reasoning, source-bias awareness, a visible critic-and-revision loop, and a measurable eval harness.
 
 The thesis: AI is a bridging technology more than a summarizing one. Indian history is full of context that gets flattened in translation — caste geography, peth boundaries, the difference between a colonial and a post-colonial reading of the same event. A system that surfaces those gaps instead of papering over them is more useful than one that produces fluent generic text.
 
 ## What it does
 
-Pick a walk. Pick who you are. The system narrates each stop in your voice, with citations to the curated sources it drew from. Between stops, a path-reasoner agent explains why this specific physical route mattered — terrain, political geography, social geography, symbolism — instead of just describing the destinations.
+You pick a historic walk through old Pune. You pick who you are — an Italian visitor, an Indian schoolkid, a history researcher, or a curious traveler. The system narrates each stop _in your voice_, with citations to the curated sources it drew from, after self-evaluating the draft and revising if the critic flags issues. Between stops, a path-reasoner agent explains why the specific physical route mattered — terrain, political geography, social geography, symbolism — instead of just describing the destinations.
+
+Every claim in every narrative traces to a source. Every source carries an explicit bias note. The pipeline is visible in the UI as it runs.
 
 ## AI system design
 
-```
-USER → walk + persona
-   │
-   ▼
-RESEARCHER AGENT          hybrid BM25 + dense retrieval
-   │                       over curated corpus, with
-   │                       bias notes preserved
-   ▼
-STORYTELLER AGENT         persona-conditioned narrative,
-   │                       inline citations, analogical
-   │                       reasoning across cultures
-   ▼
-CRITIC AGENT              scores on factual accuracy,
-   │                       persona fit, cultural
-   │                       sensitivity, source-bias awareness;
-   │                       triggers revision if needed
-   ▼
-PATH-REASONER AGENT       structured JSON output
-                           explaining why the route mattered
-```
+USER picks a walk + persona
+│
+▼
+RESEARCHER AGENT theme-overlap retrieval over curated corpus,
+│ with diversity preservation across source_types
+│ (primary, colonial, secondary, oral)
+▼
+STORYTELLER AGENT persona-conditioned narrative generation,
+│ strict source-grounding (no out-of-corpus facts),
+│ inline citations, analogical reasoning across cultures
+▼
+CRITIC AGENT scores narrative on 4 dimensions:
+│ factual accuracy, persona fit, cultural sensitivity,
+│ source-bias awareness. Triggers a single revision
+│ pass if any score ≤ 2 or total < 14/20.
+▼
+PATH-REASONER AGENT structured-JSON reasoning between stops,
+with calibrated confidence and explicit
+uncertainty notes about what sources cannot tell us
 
-See [DECISIONS.md](./DECISIONS.md) for tradeoffs on each choice.
+All four agents are Claude (Sonnet 4.5 by default). The pipeline state is rendered in the UI as it runs: `Researching → Drafting → Critiquing → Revising → Done`.
+
+See [DECISIONS.md](./DECISIONS.md) for the architectural tradeoffs behind each choice.
+
+## Source corpus
+
+The corpus is the project's actual moat. `corpus/sources.json` contains 14 hand-curated source snippets across 5 stops, with three integrity flags on every entry:
+
+- `source_type`: primary / secondary / colonial / oral
+- `verification_status`: `verified` (cross-checked against an accessible online source), `ai_drafted_unverified` (summarizes well-known historiography but specific phrasing not line-checked), or `user_added`
+- `bias_notes`: explicit annotation of how the source frames its content
+
+The bias notes are surfaced to every agent. The system reasons over _labeled evidence_, not interchangeable documents — which is why it can correctly distinguish between a 19th-century British colonial framing of Bajirao II and post-colonial scholarship on the same period.
+
+A production deployment would replace AI-drafted entries with hand-verified primary sources and expand the corpus to ~100 entries. The integrity flag makes this transparent.
 
 ## Evals
 
-`/evals/report.md` contains a comparison of model performance across 4 personas × 10 prompts × N Claude models, scored on 4 dimensions by a held-out Claude judge (different model than the generator). Cross-family validation (GPT, Gemini) is future work — see `evals/report.md` for full methodology and limitations. _(populated on day 5)_
+`evals/report.md` is regenerated by running `npm run eval`. The current run benchmarks Claude Sonnet 4.5 vs Claude Haiku 4.5 across 10 hand-authored prompts (5 stops × 4 personas, sampled), with cross-model judging within the Claude family.
 
-## Corpus
+**The most interesting result:** Haiku slightly outperformed Sonnet on average (14.10/20 vs 13.30/20). Sonnet won on persona-fit (more vivid analogies) but lost on factual accuracy (more out-of-corpus extension) and bias-awareness. Sonnet triggered revision on 10/10 prompts; Haiku on 6/10. This is a real tradeoff, surfaced by the eval, and documented as Decision D8.
 
-`/corpus/sources.json` is the project's actual moat. Every entry carries source provenance and explicit bias notes, so the LLM is reasoning over labeled evidence rather than averaging unlabeled documents.
+The report states limitations openly: small n, single judge per generation, same-family judges, eval set authored alongside the system. Cross-family validation (GPT, Gemini as third judges) is the obvious next step.
+
+View the rendered report at `/evals` on the live site, or read `evals/report.md` in the repo.
 
 ## Stack
 
-Next.js 15 · Anthropic Claude (only) · BM25 retrieval (no embeddings provider) · Leaflet (OpenStreetMap) · TypeScript · Tailwind · deployed on Vercel.
+Next.js 15 · Anthropic Claude (only) · Theme-overlap retrieval (no embeddings provider) · Leaflet (OpenStreetMap) · TypeScript · Tailwind · deployed on Vercel.
 
 ## Limitations (stated honestly)
 
 - One walk, five stops, English only. Extending to multiple cities and Indian languages is the obvious next step.
-- Corpus is small (~30 sources). Quality > quantity, but more sources would make the eval more meaningful.
-- Eval harness uses LLM-as-judge. Useful for relative model comparison; not a substitute for human evaluation.
-- No real GPS — walking simulation is a click-through. A real mobile build with geofencing is a separate project.
-- Path-reasoner can over-confidently rationalize; the `uncertainty_notes` field is the mitigation.
+- Corpus is small (~14 sources). Some stops have only 2-3 entries, which constrains how rich the narrative can get without sliding into fabrication. The strict source-grounding is the safety net.
+- Eval harness uses LLM-as-judge with same-family models. Useful for relative model comparison; not a substitute for human evaluation or cross-family validation.
+- No real GPS or geofencing — the walk is a click-through map experience. Real mobile + offline + dead-zone handling was descoped from the original brief in favor of getting the AI engineering right.
+- Path-reasoner can over-confidently rationalize. The `confidence` and `uncertainty_notes` fields in its output are the mitigation; both are visibly surfaced in the UI.
+- Theme-overlap retrieval is simple. At ~14 sources it works well; past ~100 sources, hybrid BM25 + dense retrieval (e.g. Voyage embeddings) is the upgrade path.
 
 ## What I'd build next
 
-- Real mobile + GPS + dead-zone offline mode (the original brief)
+- Real mobile + GPS + dead-zone offline mode with a small local model fallback
 - Multilingual: same agent pipeline, Marathi and Hindi outputs
-- Wider corpus with primary-source ingestion pipeline
-- Human-evaluated eval set, not just LLM-as-judge
-- Walk authoring tool — let local historians contribute curated walks
+- Wider corpus with primary-source ingestion pipeline; replace AI-drafted entries with human-verified ones
+- Human-evaluated eval set, plus cross-family judges (GPT-4, Gemini)
+- Walk authoring tool — let local historians contribute curated walks with bias-aware sources
+- Voice / TTS layer (ElevenLabs with per-persona voice mapping)
+- Multimodal input — point your phone at a landmark and have the system identify it, retrieve sources, and start a narrative
 
 ## Running locally
 
 ```bash
-cp .env.example .env.local        # add your API keys
+cp .env.example .env.local        # add your ANTHROPIC_API_KEY
 npm install
 npm run dev                       # http://localhost:3000
 ```
 
+To regenerate the eval report:
+
+```bash
+ANTHROPIC_API_KEY=sk-ant-... npm run eval
+```
+
 ## Author note
 
-I authored a similar problem statement as a mentor at an AI event earlier this year — this is my own attempt to actually build it, scoped to one route, AI-first.
+I authored a similar problem statement (ChronoPath AI) as a mentor at an AI event earlier this year. This repo is my own attempt to actually build a slice of it, AI-first and scoped to one route. The original brief envisioned location-aware multimodal storytelling at scale; this is the multi-agent reasoning core, shipped as a working portfolio piece in two days.
+
+I'm interested in roles where the AI work means designing systems with measurable behavior — not just calling LLMs. The eval harness, the bias-aware retrieval, and the visible critic loop here are the things I think about most.

@@ -34,7 +34,33 @@ h1, h2, h3, h4, .serif {
   color: var(--ink);
 }
 
-.narrative p { margin-bottom: 1rem; }
+.narrative p {
+  margin-bottom: 1rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.narrative em {
+  font-style: italic;
+  color: var(--sepia);
+}
+
+.narrative strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.narrative .citation {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65em;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  background: rgba(26, 22, 18, 0.04);
+  padding: 0.05em 0.4em;
+  border-radius: 2px;
+  vertical-align: middle;
+  margin: 0 0.15em;
+}
 
 .eyebrow {
   font-family: "JetBrains Mono", monospace;
@@ -50,5 +76,20 @@ h1, h2, h3, h4, .serif {
   margin: 1.5rem 0;
 }
 
-/* Leaflet marker tweak */
-.leaflet-container { background: #ede5d0; }
+.leaflet-container {
+  background: #ede5d0;
+}
+
+main {
+  animation: fadePage 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadePage {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

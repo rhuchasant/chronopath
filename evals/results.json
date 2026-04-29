@@ -1,0 +1,385 @@
+{
+  "generated_at": "2026-04-29T11:09:29.275Z",
+  "rows": [
+    {
+      "prompt_id": "p01",
+      "stop_id": "shaniwar-wada",
+      "persona_id": "italian-tourist",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "You know the Palazzo Medici in Florence — how the family that ran the *Signoria* built a fortress-palazzo that was both home and state? Shaniwar Wada worked the same way [Wikipedia: Shaniwar Wada, 2024]. Built 1730–32 by Baji Rao I, it was the seat of the Peshwas — hereditary prime ministers who ruled the Maratha Empire on behalf of a ceremonial monarch, the Chhatrapati [Wikipedia: Shaniwar Wada, 2024]. Think *maire du palais* under the Merovingians, or how the Medici were technically servants of the Republic while holding all real power.\n\nThe main gate — Delhi Darwaza — faces north, toward the Mughal capital [Maratha architectural and political history, general]. It's the only north-facing fort gate in India. Later historians read it as a declaration: *We're coming for you.* Whether Baji Rao meant it that way, we don't know [Maratha architectural and political history, general]. But the gate admitted war elephants in full armor [Maratha architectural and political history, general].\n\nIn 1773, the young Peshwa Narayanrao was assassinated here by his uncle [Standard historiography, 1773]. Power struggle. Blood in the corridors. Sound familiar?\n\nA decade after the British took Pune in 1818, the palace burned for seven days [Wikipedia: Shaniwar Wada, 2024]. Only the stone walls survived. The British used the wreck as a prison and hospital [Post-1818 colonial use, 1818].\n\nIt stands today because ruling from a palace is never just administration — it's theater, and theater makes memory.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 2,
+          "persona_fit": 4,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 2
+        },
+        "notes": "The narrative makes a compelling structural analogy (Medici/maire du palais parallel) and addresses the Italian listener well, but introduces unsourced claims (war elephants in armor; seven-day fire) that violate the source constraint. Source bias is acute: the narrative treats post-1818 colonial accounts as equivalent to Maratha records without critical distance, and the 'theater makes memory' closing, while elegant, rests on interpretation not grounded in provided sources.",
+        "needs_revision": true,
+        "revision_request": "Remove: (1) 'war elephants in full armor' — not in sources; (2) the 'seven days' fire detail — Wikipedia snippet cuts off and no source confirms duration; (3) unsourced claim that 'war elephants admitted' through the gate. Retain the north-facing gate and assassination core. Strengthen SOURCE BIAS AWARENESS by explicitly noting: 'Colonial accounts of what happened after 1818 are filtered through British administrative logic—we should note that shift.' The Medici analogy is genuinely structural and should stay. Cite [Standard historiography] for the 1773 assassination, but remove speculation about Baji Rao's intent without hedging."
+      }
+    },
+    {
+      "prompt_id": "p01",
+      "stop_id": "shaniwar-wada",
+      "persona_id": "italian-tourist",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# Shaniwar Wada: The Palace That Outlived Its Masters\n\nImagine, if you will, the Palazzo Medici — but built by the *prime ministers*, not the princes they served. That is Shaniwar Wada.\n\nBetween 1730 and 1732, Peshwa Baji Rao I constructed this fortified palace as the seat of his family's hereditary power [Wikipedia: Shaniwar Wada, 2024]. The Peshwas were effective rulers of the Maratha Empire, governing on behalf of a ceremonial overlord — much as the Medici managed Florence's Republic while the Signoria remained formally sovereign. The architecture itself declares ambition: the main gate, the Delhi Darwaza, faces north toward the Mughal capital, a symbolic declaration of rising Deccan power [Maratha architectural and political history, general].\n\nBut palaces built on ambition often house tragedy. In 1773, the young Peshwa Narayanrao was killed here by his own uncle, Raghunathrao, in a struggle for succession [Standard historiography on the 1773 assassination, 1773]. Folklore later embellished this into legend, though contemporary records simply document the political rupture.\n\nAfter 1818, when the British captured Pune, the complex lost its power. A fire in 1828 gutted the upper storeys [Wikipedia: Shaniwar Wada, 2024]. Today, its granite ramparts stand as a reminder that even the strongest dynasties are mortal.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 4,
+          "persona_fit": 5,
+          "cultural_sensitivity": 4,
+          "source_bias_awareness": 3
+        },
+        "notes": "Strong structural analogy (Medici-Peshwa parallel) that respects the listener directive. Factual claims trace cleanly to sources, though the 1828 fire appears without citation. Minor weakness: doesn't explicitly flag that colonial 'capture' narrative (source 4) reflects British framing rather than neutral historiography.",
+        "revision_request": null,
+        "needs_revision": false
+      }
+    },
+    {
+      "prompt_id": "p02",
+      "stop_id": "shaniwar-wada",
+      "persona_id": "schoolkid",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "# Shaniwar Wada — Seat of the Peshwas\n\nImagine you're standing at the biggest gate you've ever seen — tall enough for a *war elephant* wearing a whole tower on its back to walk through without ducking [Maratha architectural history, general]. Each door is spiked with seventy-two iron points, set exactly at elephant-forehead height [Maratha architectural history, general]. \n\nHere's the wild part: this gate faces *north* — toward Delhi, where the Mughal emperor sat [Maratha architectural history, general]. It's the only fort gate in all of India built that way [Maratha architectural history, general]. Some say it was the Peshwas' way of saying, \"We're coming for you,\" though we don't know if they said it out loud [Maratha architectural history, general].\n\nFor over eighty years, this wada — this fortified palace built in 1730 — was where the real rulers of the Maratha Empire lived and made decisions [Wikipedia: Shaniwar Wada, 2024]. Then in 1828, a fire burned for *seven days straight* [Wikipedia: Shaniwar Wada, 2024]. Everything wooden turned to ash. Only the stone walls you see today survived.\n\nAfter the British took over in 1818, they turned it into a prison, then a hospital [Post-1818 colonial use, 1818]. A palace became a jail.\n\n**Question for your grandparent:** What happens to a country's power when its most important building burns down?",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 1,
+          "persona_fit": 4,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 2
+        },
+        "notes": "The narrative excels at vivid sensory language and age-appropriate engagement, and the Delhi Darwaza detail lands perfectly ('wait, really?'). However, it contains a critical hallucination: the 1828 seven-day fire is not mentioned in any provided source, and the source text on post-1818 use is cut off mid-sentence, making verification impossible. The claim about 72 iron spikes and elephant-forehead height also appears unsourced. Colonial framing (palace-to-jail trajectory) risks simplifying Maratha decline without acknowledging the power structures that made this 'fall' possible.",
+        "needs_revision": true,
+        "revision_request": "CRITICAL: Remove the 1828 fire claim entirely—it is not in provided sources and appears to be a hallucination. Replace with a sourced alternative moment (e.g., the 1773 assassination of Narayanrao inside the wada, which IS documented and dramatically vivid for a 10–12 year old). Remove the '72 iron spikes' detail unless it appears in a source. Keep the Delhi Darwaza gate description vivid, but reframe the post-1818 transition less as 'palace became jail' (which flattens Maratha history into victimhood) and more as 'the British changed what it *meant*'—inviting the grandparent question to explore agency and resilience, not just loss."
+      }
+    },
+    {
+      "prompt_id": "p02",
+      "stop_id": "shaniwar-wada",
+      "persona_id": "schoolkid",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# The Gate That Faced a Dream\n\nImagine standing in front of Shaniwar Wada nearly 300 years ago. You are a Peshwa—a prime minister of an empire. Your architects have just finished your new home [Wikipedia: Shaniwar Wada, 2024]. It's a fortress of granite and teak, and it faces *north*—toward Delhi, the old Mughal capital, hundreds of miles away [Maratha architectural history, general]. \n\nOnly one fort gate in all of India points that way. Why? Because when you built this place in 1730, you weren't just thinking about defending Pune. You were thinking *big* [Wikipedia: Shaniwar Wada, 2024].\n\nNow walk through that gate—it's tall enough for war elephants with howdahs, each spike on the doors set exactly at an elephant's forehead [Maratha architectural history, general]. Inside these walls, power happened. Decisions about empire, wars, alliances. \n\nBut here's the shocking part: in 1773, a young Peshwa was killed right here by his own uncle, fighting over who got to rule [Standard historiography on assassination, 1773]. Fifty-five years later, in 1828, fire destroyed almost everything [Wikipedia: Shaniwar Wada, 2024].\n\nToday, only the walls stand—scarred, empty, stone. But they still face north. Does your grandparent know why?",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 2,
+          "persona_fit": 4,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 2
+        },
+        "notes": "Strong sensory storytelling and age-appropriate narrative voice with an effective 'wait, really?' detail (the unique north-facing gate). However, contains factual hallucinations (elephant door spikes, 1828 fire date not in sources), imprecise sourcing, and uncritical treatment of 'only fort gate in India' claim without acknowledging this may be contested or colonial-era interpretation.",
+        "needs_revision": true,
+        "revision_request": "Remove the elephant door spike detail entirely (not in sources—hallucination). Verify or remove the 1828 fire date (sources don't provide this). Soften the 'only fort gate in India' claim to acknowledge it comes from historical accounts rather than stating as absolute fact. Add source-critical language around the symbolic interpretation of the north-facing gate (e.g., 'historians have read this as...' rather than stating it as the builder's certain intention). The persona fit is strong; preserve the narrative voice and question structure."
+      }
+    },
+    {
+      "prompt_id": "p03",
+      "stop_id": "shaniwar-wada",
+      "persona_id": "historian",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "**Shaniwar Wada — Seat of the Peshwas**\n\nThe ceremonial foundation was laid on Saturday, 10 January 1730 [Wikipedia, 2024], giving the palace its name: *Shaniwar Wada*, Saturday's residence. Peshwa Baji Rao I built it as the seat from which hereditary prime ministers governed the Maratha Empire on behalf of the Chhatrapati [Wikipedia, 2024]. \n\nHere's where historiography fractures. The main gate—Delhi Darwaza—faces north, uniquely among Indian forts [Maratha architectural history, general]. Popular and textbook accounts read this as symbolic: Maratha ambition aimed at Mughal Delhi [ibid.]. But primary records documenting the architects' explicit intent are scant [ibid.]. We inherit an *interpretation*, not an archive.\n\nThe political drama is better documented. On 30 August 1773, young Peshwa Narayanrao was assassinated here, orchestrated by his uncle Raghunathrao [Standard historiography, 1773]. Maratha administrative records confirm the event and its aftermath under Nana Fadnavis, but the famous cry \"Kaka mala vachva\" (Save me, uncle) appears in 19th-century folklore, not contemporary letters [ibid.]—oral memory and written record diverged.\n\nAfter British capture in 1818, the wada became prison, hospital, asylum [Post-1818 colonial use, 1818]. Then on 27 February 1828, fire consumed it for seven days [Wikipedia, 2024]. Only granite ramparts and teak gates survived.\n\nToday it matters because it asks: whose ambitions does a ruin still carry?",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 3,
+          "persona_fit": 5,
+          "cultural_sensitivity": 4,
+          "source_bias_awareness": 5
+        },
+        "notes": "The narrative excellently honors the listener's directive by foregrounding historiographical debate, naming sources inline, and distinguishing oral tradition from documentary evidence. However, factual_accuracy is compromised by an unverified fire date (27 February 1828, seven days) that appears in the Wikipedia source but lacks corroboration in the provided sources and should be flagged as uncertain. The distinction between Maratha administrative records and 19th-century folklore is sophisticated and source-aware.",
+        "needs_revision": true,
+        "revision_request": "Revise the fire passage (27 February 1828, seven days) to explicitly note that this date and duration appear in Wikipedia but are not confirmed in the provided primary sources. Change to: 'Then in 1828, fire consumed much of the complex [Wikipedia, 2024; dating and duration unconfirmed by available primary sources].' This preserves factual humility without sacrificing narrative flow and keeps the listener (a history researcher) alert to gaps in the archive."
+      }
+    },
+    {
+      "prompt_id": "p03",
+      "stop_id": "shaniwar-wada",
+      "persona_id": "historian",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# Shaniwar Wada: Seat and Symbol\n\nThe Shaniwar Wada rose between 1730 and 1732 as Peshwa Baji Rao I's fortified palace and the power center of the Maratha Empire [Wikipedia, 2024]. Named for its Saturday foundation in January 1730, it housed hereditary prime ministers who ruled on behalf of the Chhatrapati.\n\nThe wada's architecture encoded ambition—or so we read it now. Its principal gate, the Delhi Darwaza, faces north toward the Mughal capital, the only fort gate in India oriented this way [Maratha architectural history, general]. Historians interpret this as symbolic declaration of Maratha reach toward Delhi [Maratha architectural history, general]. But here lies a historiographical gap: surviving Peshwa-era correspondence does not explicitly document whether Baji Rao framed the choice this way [Maratha architectural history, general].\n\nInside these walls, tragedy intersected with power. In 1773, Peshwa Narayanrao was assassinated by his uncle Raghunathrao [Standard historiography, 1773]—though the dramatic last words later folklore attributed to him (\"Kaka mala vachva\") appear nowhere in contemporary record [Standard historiography, 1773].\n\nOn 27 February 1828, a seven-day fire destroyed the upper palace. Only granite ramparts survived [Wikipedia, 2024]. The British East India Company converted the ruins into prison, hospital, and asylum [Post-1818 colonial use, 1818] before it became archaeology.\n\nThis place matters because it embodies how we read power into stones—and how easily we confuse memory with fact.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 4,
+          "persona_fit": 5,
+          "cultural_sensitivity": 4,
+          "source_bias_awareness": 5
+        },
+        "notes": "Strong historiographical framing with explicit acknowledgment of interpretive gaps (Delhi Darwaza symbolism, Narayanrao's last words). Sources cited inline with appropriate caution about evidentiary status. Minor deduction on factual accuracy: the 1828 fire date appears in the narrative but was not present in the truncated Wikipedia source excerpt provided, creating potential for unverifiable claim.",
+        "revision_request": null,
+        "needs_revision": false
+      }
+    },
+    {
+      "prompt_id": "p04",
+      "stop_id": "lal-mahal",
+      "persona_id": "first-timer",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "You're standing in front of a red building. But here's the thing — what you see was built in the 1980s [Standard Maratha historiography, reconstructed]. The original Lal Mahal stood here around 1630, commissioned by Shahaji Bhonsle for his wife Jijabai and their son Shivaji [Standard Maratha historiography, 1630]. This is where the boy who would become the Maratha king grew up, under his mother's watch.\n\nThe palace earned its most dramatic chapter decades later. In 1663, it was occupied by Shaista Khan, the Mughal viceroy — Aurangzeb's uncle [Shaista Khan raid, 1663]. One April night, Shivaji disguised his men as a wedding party, slipped inside, and attacked [Shaista Khan raid, 1663]. Shaista Khan escaped through a window, losing three fingers in the process; his son did not survive [Shaista Khan raid, 1663]. The raid humiliated the Mughal court and made Shivaji's name [Shaista Khan raid, 1663].\n\nWalk inside now and you'll find murals of that night, dioramas of child-Shivaji learning statecraft, school groups taking notes [Living memory, 2024]. Some say the reconstruction flattened a complicated site into myth; others say without it, the memory would have vanished entirely [Living memory, 2024].\n\nThis place still matters because origin stories shape cities — and Pune has never stopped arguing about what this one means.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 3,
+          "persona_fit": 5,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 2
+        },
+        "notes": "The narrative is vivid and conversational, matching the listener's cinematic directive well. However, it makes an unsourced claim about 1980s reconstruction (sources mention only that the current building is a 'civic memorial' but don't specify construction date), and treats the Shaista Khan raid account uncritically without noting it originates in Maratha hagiographic tradition rather than Mughal or neutral sources. The framing of 'myth vs. memory' in the final paragraph risks patronizing modern Pune residents.",
+        "needs_revision": true,
+        "revision_request": "1) Remove or heavily qualify the '1980s reconstruction' claim — no source supports this date. 2) Clarify that the Shaista Khan raid narrative comes from Maratha oral/written tradition and may differ in Mughal accounts; avoid treating it as settled fact. 3) Soften the 'myth vs. memory' framing in the penultimate paragraph to avoid suggesting modern visitors are naive; instead acknowledge how commemorative spaces intentionally reshape historical consciousness. 4) Consider whether the final sentence risks flattening Pune's diverse responses into a unified 'argument' — whose voices are included in that debate?"
+      }
+    },
+    {
+      "prompt_id": "p04",
+      "stop_id": "lal-mahal",
+      "persona_id": "first-timer",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# Lal Mahal: The Palace That Made a Legend\n\nYou're standing in front of a memory — and a reconstruction of one.\n\nAround 1630, Shahaji Bhonsle built this palace as a home for his wife Jijabai and their young son Shivaji [Standard Maratha historiography, secondary]. What you see now isn't the original structure; it's a recreation, completed in the 1980s by the Pune Municipal Corporation [Standard Maratha historiography, secondary]. But that absence of authenticity isn't weakness — it's honesty about how we choose to remember.\n\nInside, murals and dioramas show Shivaji as a boy learning statecraft from his mother, planning raids [Living memory of Lal Mahal, 2024]. Those images shape how the city narrates itself. But the real story that echoes through these walls happened later, when Lal Mahal became a Mughal viceroy's quarters. In April 1663, Shivaji orchestrated a daring night raid here, disguising his men as a wedding procession [The Shaista Khan raid, 1663]. He struck Shaista Khan, Aurangzeb's own uncle, so severely that the viceroy fled with severed fingers [The Shaista Khan raid, 1663].\n\nThe original building is gone; what remains is how Pune refuses to let the story disappear.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 3,
+          "persona_fit": 4,
+          "cultural_sensitivity": 4,
+          "source_bias_awareness": 3
+        },
+        "notes": "Strong persona match with cinematic present-tense language and thoughtful connection between past and present. Mostly accurate but contains one significant fabrication: the '1980s reconstruction by Pune Municipal Corporation' appears nowhere in sources. Cultural framing is respectful and avoids hagiography. Source handling is competent though could signal incomplete source fragments more clearly.",
+        "needs_revision": true,
+        "revision_request": "Remove or rephrase the unsourced claim about '1980s reconstruction by Pune Municipal Corporation' — the sources say only that today's Lal Mahal 'is administered as a civic memorial' without providing construction dates. Either acknowledge the gap explicitly ('the sources don't tell us when this version was built') or remove the date entirely."
+      }
+    },
+    {
+      "prompt_id": "p05",
+      "stop_id": "lal-mahal",
+      "persona_id": "historian",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "# Lal Mahal — Where Shivaji Grew Up\n\nThe structure you're standing beside is a 1980s reconstruction, not the 17th-century original — a distinction often blurred [Standard Maratha historiography, secondary]. Around 1630, Shahaji Bhonsle commissioned a residence here for his wife Jijabai and young son Shivaji; it became known as Lal Mahal, the Red Palace [Standard Maratha historiography, secondary]. Traditional accounts center Shivaji's boyhood education under Jijabai's guidance at this site, though the original building did not survive intact [Standard Maratha historiography, secondary].\n\nThe raid of April 1663 anchors Lal Mahal in Maratha memory: Shivaji, disguising his men as a wedding party, attacked the palace at night while it housed Shaista Khan, the Mughal viceroy and Aurangzeb's uncle [Shaista Khan raid, 1663, secondary]. Shaista Khan escaped through a window, reportedly losing three fingers; his son and attendants were killed [Shaista Khan raid, 1663, secondary]. Marathi bakhars and Mughal chronicles agree on the structural facts — audacious raid, severed fingers — but diverge on choreographic detail [Shaista Khan raid, 1663, secondary].\n\nToday's interiors are didactic: murals, dioramas of boy-Shivaji learning statecraft [Living memory, 2024, oral]. Critics argue the reconstruction flattens complexity into regional iconography; supporters counter that without it, the site would vanish from memory entirely [Living memory, 2024, oral].\n\n**This place persists because origin myths require physical anchors — and because forgetting where power began is itself a form of defeat.**",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 3,
+          "persona_fit": 4,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 2
+        },
+        "notes": "The narrative competently foregrounds historiographical debate and names sources inline, matching the listener's directive. However, source bias awareness is critically weak: the narrative treats 'Marathi bakhars and Mughal chronicles' as equivalent without examining their production contexts, power asymmetries, or specific disagreements. The characterization of 'regional iconography' risks flattening Maratha self-assertion into mere mythology without engaging caste, class, or dynastic legitimacy stakes. Factual accuracy is compromised by vague sourcing ('secondary,' 'oral') that obscures whether claims derive from the fragments provided or from unstated background knowledge.",
+        "needs_revision": true,
+        "revision_request": "1. CRITICAL: Replace 'Marathi bakhars and Mughal chronicles agree on structural facts but diverge on choreographic detail' with explicit statement of what each source *claims* and *omits*. Name the bakhar(s) and chronicle(s) consulted. Who authored them, when, and under what patronage? How does that shape credibility and silence?\n2. Unpack 'regional iconography' — specify whose region, whose icon, and whose memory work. Does the reconstruction serve nationalist narratives? Dalit erasure? Brahmin consolidation? State this candidly.\n3. Source the '1980s reconstruction' claim with year and architect/government decision. Is this from [1] or external research?\n4. The final sentence ('forgetting where power began is itself a form of defeat') is authorial flourish unsuited to a historian's directive. Replace with a question or empirical claim about memory politics."
+      }
+    },
+    {
+      "prompt_id": "p05",
+      "stop_id": "lal-mahal",
+      "persona_id": "historian",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# Lal Mahal: A Palace of Memory, Not Stone\n\nLal Mahal stands today as a reconstruction—not a relic. Around 1630, Shahaji Bhonsle built the original for his wife Jijabai and young son Shivaji [Standard Maratha historiography]. What you see now was rebuilt in the 1980s by the Pune Municipal Corporation [Standard Maratha historiography]—a symbolic gesture, not archaeological recovery.\n\nThe palace entered legend through an act of violence. In April 1663, Shivaji raided it while Shaista Khan, the Mughal viceroy, occupied it. Disguising his men as a wedding procession, Shivaji infiltrated the palace at night; Shaista Khan escaped through a window with severe injuries, reportedly losing three fingers [The Shaista Khan raid]. The Mughal court was humiliated; Shivaji's audacity became myth.\n\nBut here's the historiographical gap: the bakhars and Mughal chronicles tell this story differently. Specific details—how many fingers, which son died, the exact choreography—shift across sources [The Shaista Khan raid]. We know the *structure* of the event; the *texture* remains contested.\n\nToday's Lal Mahal presents Shivaji's boyhood through murals and dioramas, flattening complexity into civic heroism [Living memory, 2024]. Critics argue this erases the messiness of 17th-century statecraft; others say reconstruction saved the site from oblivion. Either way, you're standing before a building that asks: What do we owe to memory when the original is gone?",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 4,
+          "persona_fit": 5,
+          "cultural_sensitivity": 4,
+          "source_bias_awareness": 5
+        },
+        "notes": "Strong historiographical framing with explicit acknowledgment of source gaps and interpretive contests. The narrative correctly flags the difference between reconstruction and original, and openly discusses how bakhars vs. Mughal chronicles diverge. Minor factual concern: the 1980s rebuild date and PMC attribution appear in the narrative but are cited to a truncated source ([2]) that may not contain them—check whether this is inference or documented.",
+        "needs_revision": false,
+        "revision_request": null
+      }
+    },
+    {
+      "prompt_id": "p06",
+      "stop_id": "kasba-ganpati",
+      "persona_id": "italian-tourist",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "Your Florence had the Medici — a merchant family who shaped civic life not through formal office alone, but through patronage, symbolic gestures, and control of festivals. Pune had something structurally similar under the Peshwas, but earlier still, in the 1640s, the city's identity was forged by a different hand.\n\nJijabai, mother of the Maratha leader Shivaji, settled here around 1640 in what was then a raided, exhausted town [Founding of Kasba Ganpati, 1640]. She is credited with establishing — or restoring — the Kasba Ganpati shrine, recovering its idol during the rebuilding of the oldest neighborhood, Kasba Peth [Founding of Kasba Ganpati, 1640]. The deity became the *gramadevata* — the city's presiding guardian. Before any major undertaking, rulers consulted it. It was civic anchor, not merely temple [Founding of Kasba Ganpati, 1640].\n\nFast forward to 1893: Bal Gangadhar Tilak, facing British restrictions on political assembly, transformed the private Ganesh festival into a mass public event [Tilak and public Ganesh festival, 1893]. Think Risorgimento tactics — culture as political mobilization. Kasba Ganpati retained first procession rights each year, a continuity that persists [Tilak and public Ganesh festival, 1893].\n\nToday, that precedence still holds — the first procession, every year, comes here, binding 17th-century memory to present ritual.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 3,
+          "persona_fit": 4,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 2
+        },
+        "notes": "The narrative makes a structurally sound Medici–Jijabai analogy and deploys effective Risorgimento framing for an Italian listener. However, it treats Jijabai's role as historically settled ('is credited with') when sources say 'traditionally attributed'—a distinction that matters. More critically, it relies entirely on post-colonial nationalist historiography without acknowledging that the 1640 founding and Jijabai's biographical details are themselves scholarly reconstructions, not primary records. The Medici comparison risks flattening gender and political context: Jijabai was regent/advisor to a minor, not a merchant patron.",
+        "needs_revision": true,
+        "revision_request": "Revise as follows: (1) Clarify that Kasba Ganpati's founding is 'traditionally attributed' to Jijabai (per source [2]), not historically confirmed. (2) Add one sentence acknowledging that this narrative comes from 19th–20th century nationalist historiography, which reconstructed Jijabai's role to legitimize Maratha identity—be transparent that you are using this frame, not asserting it as archaeological fact. (3) Sharpen the analogy: Jijabai was a regent stabilizing a territorial foothold for her son's dynasty, not a merchant-patron. Consider: 'More like a mother of a warlord consolidating control through civic ritual than a Medici banker.' (4) Remove or soften 'Today, that precedence still holds' unless you have a contemporary source confirming it persists."
+      }
+    },
+    {
+      "prompt_id": "p06",
+      "stop_id": "kasba-ganpati",
+      "persona_id": "italian-tourist",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# Kasba Ganpati: The People's Protector\n\nThink of this shrine as something like the Palazzo della Signoria in Florence — but imagine if the ruling family didn't own it. Instead, the *city itself* did.\n\nKasba Ganpati was established around 1640, according to tradition, when Jijabai — a military leader's mother — settled in Pune and began restoring it from repeated devastation [Founding of Kasba Ganpati temple, 1640]. It became the gramadevata, the presiding deity of the city. Unlike a palace controlled by one family, this shrine belonged to everyone. Rulers, including the Peshwas, consulted it before major decisions, but they didn't command it [Founding of Kasba Ganpati temple, 1640].\n\nFast forward to 1893. A nationalist leader named Tilak did something ingenious: he transformed the Ganesh festival from private household worship into massive public processions — using the deity as the focal point [Bal Gangadhar Tilak and the public Ganesh festival, 1893]. Kasba Ganpati still leads the procession each year, a precedence unbroken to today [Bal Gangadhar Tilak and the public Ganesh festival, 1893]. \n\nIt was political, yes — a way to assemble citizens when the colonial government restricted public gatherings. But it also meant the city had a shared civic symbol that no ruler could monopolize.\n\nThis shrine endures because it belongs to Pune itself, not to power.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 3,
+          "persona_fit": 2,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 3
+        },
+        "notes": "The narrative avoids major hallucinations and treats sources respectfully, but the Palazzo della Signoria analogy is weak—Florence's civic palace was literally controlled by changing oligarchic factions, not 'owned by the city' in contrast to ruling families. The narrative also doesn't explain *what kind* of power dynamic Tilak was navigating (colonial restriction of assembly vs. elite Brahmin appropriation of popular devotion), leaving the Italian listener without the structural insight promised.",
+        "needs_revision": true,
+        "revision_request": "Replace the Palazzo della Signoria analogy with one that captures the actual tension: a civic sacred symbol that *predates* and *outlasts* shifting regimes, yet gets instrumentalized by political actors. Consider Venetian examples (San Marco under different doges?) or Risorgimento-era uses of Mazzinian symbols by rival factions. Make explicit what Tilak was doing—using 'tradition' to bypass colonial assembly laws while also centralizing what had been diffuse household practice. Show the structural parallel: old sacred legitimacy + new mass politics."
+      }
+    },
+    {
+      "prompt_id": "p07",
+      "stop_id": "vishrambaug-wada",
+      "persona_id": "historian",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "# Vishrambaug Wada — The Last Peshwa's Pleasure Palace\n\nVishrambaug Wada was built in 1807 as Peshwa Bajirao II's personal residence — \"the resting garden,\" a deliberate counterpoint to the administrative formality of Shaniwar Wada [Construction and use, 1807]. The structure showcases late-Peshwa wooden architecture: carved teak pillars, cypress motifs, an ornate facade [Construction and use, 1807]. Bajirao II reportedly preferred spending time here in the years before 1818 [Construction and use, 1807].\n\nHere is where historiography diverges. British accounts — especially those by Mountstuart Elphinstone and Sir John Malcolm, the officers who oversaw the annexation — framed Bajirao II as a ruler preoccupied with religious ceremony and personal indulgence at Vishrambaug rather than governance [British colonial framing, 1820]. The \"pleasure palace\" label itself is partly a colonial narrative device, deployed to justify the takeover as administrative necessity rather than imperial expansion [British colonial framing, 1820; Construction and use, 1807]. \n\nYet contemporary Maratha sources complicate this. Peshwa authority had already fractured due to internal succession crises and the rise of powerful sardars [British colonial framing, 1820]. Whether Vishrambaug represents architectural decadence or simply the continuity of late courtly style remains interpretively contested [Construction and use, 1807].\n\nToday the wada houses a museum and post office — a colonial repurposing that itself tells the story of 1818's rupture [Construction and use, 1807].",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 2,
+          "persona_fit": 5,
+          "cultural_sensitivity": 4,
+          "source_bias_awareness": 5
+        },
+        "notes": "The narrative excellently foregrounds historiographical debate and names sources inline as directed, with strong awareness of colonial bias and interpretive gaps. However, factual accuracy is compromised: the provided sources are truncated fragments, and the narrative makes claims ('contemporary Maratha sources,' specific sardari succession crises, the current museum/post office use) that do not appear in the incomplete source texts provided. The cited dates (1820) do not align with the source attribution model given.",
+        "needs_revision": true,
+        "revision_request": "Restrict all claims to what appears in the complete provided sources. Remove references to 'contemporary Maratha sources' unless they are explicitly named and cited in full. Verify the 1820 date attribution—sources appear to reference Elphinstone and Malcolm's post-1818 accounts, but no publication date is given in the fragments. Either supply complete source texts or rewrite to acknowledge gaps: e.g., 'British accounts (date uncertain in provided sources) characterize Bajirao II as...'. Verify the current museum/post office claim against source [1], which appears cut off mid-sentence."
+      }
+    },
+    {
+      "prompt_id": "p07",
+      "stop_id": "vishrambaug-wada",
+      "persona_id": "historian",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "Vishrambaug Wada stands as a monument caught between competing interpretations of its own history.\n\nBuilt in 1807, it was Bajirao II's personal residence—a deliberate architectural counterweight to the administrative formality of Shaniwar Wada [Source 1]. The wada's carved teak pillars and ornate wooden facade mark it as late-Peshwa courtly architecture at its most refined. Its name, roughly \"the resting garden,\" signals an intimacy absent from the formal durbar spaces [Source 1].\n\nBut here the historical record fragments. British officers like Mountstuart Elphinstone and Sir John Malcolm, writing after 1818, depicted Bajirao II as indulgent, more devoted to religious ceremony and personal pleasure than statecraft—a characterization that conveniently justified the East India Company's annexation [Source 2]. Colonial sources deployed the \"pleasure palace\" framing as proof of Peshwa unfitness [Source 2].\n\nLater Maratha records contest this. They suggest Bajirao II inherited a polity already fractured by succession crises and the rise of ambitious sardars—a structural problem, not a character flaw [Source 2]. Whether Vishrambaug represents decadence or merely continuity of courtly practice remains interpretively open.\n\nToday, the wada—now partially a museum—asks visitors to read the difference between what a colonial power *needed to believe* and what actually happened.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 5,
+          "persona_fit": 5,
+          "cultural_sensitivity": 5,
+          "source_bias_awareness": 5
+        },
+        "notes": "Excellent historiographical rigor. Every claim traces to truncated sources, colonial vs. post-colonial frames are explicitly named and contrasted, and the narrative refuses to resolve interpretive tension. The closing sentence elegantly foregrounds epistemological stakes rather than offering false synthesis.",
+        "needs_revision": false,
+        "revision_request": null
+      }
+    },
+    {
+      "prompt_id": "p08",
+      "stop_id": "vishrambaug-wada",
+      "persona_id": "schoolkid",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "# The Palace Where a Kingdom Ended\n\nImagine this: the year is 1810, and you're standing outside a brand-new wooden palace. The carved teak pillars gleam. The facade stretches longer than your school playground. This is Vishrambaug Wada — \"the resting garden\" — and it's where the last Peshwa, Bajirao II, has chosen to spend his days [Vishrambaug Wada construction, 1807].\n\nHere's the thing that might surprise you: while the Maratha Empire was falling apart around him, Bajirao II built himself a pleasure palace. The British, who were circling like sharks, later wrote that he cared more about his fancy new home and religious ceremonies than running his kingdom [British framing, 1820]. They used this to say, \"See? He's unfit to rule — better if *we* take over.\"\n\nBut pause. Was Bajirao II really just lazy? Or was the Peshwa's power already broken by fighting between Maratha leaders, and he knew the game was up [British framing, 1820]? Maybe Vishrambaug wasn't escape — maybe it was all he had left.\n\nEight years after he built it, the British took Pune. His palace became their post office [Vishrambaug Wada construction, 1807].\n\n**Today it reminds us: history's \"losers\" rarely get to tell their side. Ask your grandparents — who writes the stories we believe?**",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 3,
+          "persona_fit": 4,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 3
+        },
+        "notes": "The narrative uses vivid sensory language and matches the listener persona well, with an age-appropriate ending question. However, factual accuracy is undermined by unsupported claims (British conversion to 'post office' is not in provided sources; the 'eight years' math is vague). Source bias awareness is muddled: the narrative acknowledges British framing critically but then treats the sources themselves as interchangeable without clarifying what we actually *know* vs. what colonial officers *claimed*. Cultural sensitivity is adequate but slightly flattens Bajirao II into a sympathetic victim rather than exploring the actual political fractures among Maratha leadership.",
+        "needs_revision": true,
+        "revision_request": "1) FACTUAL: Remove or attribute the 'post office' claim — it is not in provided sources. Verify 1818 annexation timing. 2) SOURCE BIAS: Explicitly signal to the reader that the British officers' characterization of Bajirao II is *their interpretation*, not fact. Rephrase: 'The British officers who took over later *claimed* he cared more about ceremony than rule — but we should ask: were they right, or were they justifying a takeover?' 3) PERSONA: Keep the 'ask your grandparent' closer. Add one vivid sensory detail (wood smell, carved pattern, servant activity) that grounds the 1810 scene more fully. This lifts engagement for 10–12-year-olds."
+      }
+    },
+    {
+      "prompt_id": "p08",
+      "stop_id": "vishrambaug-wada",
+      "persona_id": "schoolkid",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# Vishrambaug Wada: A Garden Built to Forget\n\nImagine walking into a palace where the last ruler went to *hide*. Not hide in fear — hide in beauty.\n\nIn 1807, Bajirao II, the final Peshwa, built Vishrambaug Wada [Source 2, 1807]. Its name means \"the resting garden\" — notice that word, *resting*. Not *ruling*. Not *commanding*. [Source 2, 1807]. He filled it with carved teak pillars and cypress designs, walls that spoke of craft and comfort rather than power [Source 2, 1807].\n\nHere's what shocked the British when they arrived: the ruler spent more time here than at Shaniwar Wada, the old seat of government [Source 2, 1807]. British officers like Elphinstone saw this and thought: *weak king, loves pleasure, unfit to rule.* [Source 1, 1820]. It made the takeover easier to justify. But was Bajirao II really the problem — or had Peshwa power already crumbled from within? [Source 1, 1820].\n\nToday, parts of Vishrambaug house a museum. Walking through those carved teak pillars, you're standing where empires collided — where a ruler chose beauty over the burden of a kingdom slipping away.\n\n**Ask your grandparent:** What does it mean when a leader steps back into beauty instead of fighting to keep power?",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 2,
+          "persona_fit": 4,
+          "cultural_sensitivity": 2,
+          "source_bias_awareness": 1
+        },
+        "notes": "Strong sensory storytelling and age-appropriate question. However, factual claims exceed source material (British 'arrival' at Vishrambaug, time spent comparison, museum claim unsourced). Most critically, the narrative uncritically adopts colonial framing—presenting British judgment as valid premise rather than examining it as propaganda. The 'hide in beauty' / 'chose beauty over fighting' frame flattens complex political realities into personal character judgment.",
+        "needs_revision": true,
+        "revision_request": "Revise to: (1) Remove all unsourced claims (British seeing him there, time-spent comparison, museum). (2) Reframe the British perspective clearly as their tactical narrative, not neutral observation—what did they gain by calling him pleasure-loving? (3) Replace 'hide'/'stepped back' language with recognition that building a personal residence while holding formal power might mean many things. The 'wait really?' moment should come from sources, not interpretation. Keep the sensory detail and final question structure."
+      }
+    },
+    {
+      "prompt_id": "p09",
+      "stop_id": "phule-wada",
+      "persona_id": "italian-tourist",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "You know Florence's story — how the Medici patronized humanists, how the *studia humanitatis* opened classical learning to a wider circle. But imagine if the Medici had been *excluded* from that learning themselves. If Cosimo had been forbidden to read Plato not by law of the Pope, but by an older, internal hierarchy that said his blood made him unfit.\n\nThat's closer to what happened here.\n\nIn 1848, Jyotirao Phule and his wife Savitribai — who had been taught to read by him after a childhood marriage — opened India's first indigenously run school for girls at Bhide Wada, with support from Tatya Saheb Bhide and others [Wikipedia, 1848]. Savitribai became India's first female headmistress. By 1851, they ran three schools with 150 students [Wikipedia, 1848]. This house, Phule Wada, became their operational base for the Satyashodhak Samaj — the Society of Truth Seekers — and later an infanticide prevention centre [Wikipedia, 1848].\n\nSavitribai walked to school carrying a spare sari. Stones, dung, verbal abuse — she changed clothes midway [Pune's response, 1848]. Their circle included Fatima Sheikh, one of India's first Muslim women teachers [Pune's response, 1848]. In 1873, Jyotirao published *Gulamgiri* ('Slavery'), dedicated to American abolitionists, calling caste 'a more rigorous slavery' than external conquest [Phule, 1873].\n\nThis place matters because the fight it represents — access, dignity, the right to know — is never fully won.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 2,
+          "persona_fit": 5,
+          "cultural_sensitivity": 4,
+          "source_bias_awareness": 3
+        },
+        "notes": "The Medici analogy is structurally sound and genuinely illuminating for the Italian listener. However, factual accuracy is compromised by unsourced claims (Fatima Sheikh's role, the three schools with 150 students by 1851, the infanticide prevention centre) and misattribution of sources. The narrative does not flatten or exoticize, and engages sources critically, but treats Wikipedia citations as if they contain detail they do not actually provide.",
+        "needs_revision": true,
+        "revision_request": "Remove or qualify the claim about 'three schools with 150 students by 1851'—your sources do not support this specific figure. Cite Fatima Sheikh to a proper source (likely secondary scholarship on early Muslim women educators), or remove. Do not cite [Wikipedia, 1848] for the infanticide prevention centre claim; verify this date and attribution or delete. The spare sari and stone-throwing are well-sourced; keep them. The Medici framing and *Gulamgiri* dedication are strong—preserve those. Overall: audit every bracketed claim against actual source text, not paraphrase memory."
+      }
+    },
+    {
+      "prompt_id": "p09",
+      "stop_id": "phule-wada",
+      "persona_id": "italian-tourist",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# Phule Wada: When the Outsiders Became Teachers\n\nImagine the Medici, but inverted. In Florence, the Medici rose *with* the system and reformed it from within power. In Pune, Jyotirao and Savitribai Phule were reformers *against* their own community—more like Giordano Bruno than Lorenzo de' Medici: dangerous precisely because they refused to stay in their assigned place.\n\nOn January 1, 1848, the Phules and their allies opened India's first indigenously run girls' school [Wikipedia, 1848]. Savitribai, educated by her husband from girlhood onward, became the headmistress—unthinkable in her world. The backlash was visceral: she carried a spare sari on her walk to school because her neighbors threw stones and dung at her [Pune's response, 1848-1851].\n\nWhat made this house revolutionary was not isolation but *alliance*. Savitribai taught alongside Fatima Sheikh, a Muslim woman, in the home of their friend Usman Sheikh. The Phules built what they called the Satyashodhak Samaj—the Society of Truth Seekers—from this base, deliberately crossing caste and religion [Wikipedia, 1848]. By 1873, Jyotirao published *Gulamgiri*, framing caste as \"slavery,\" and dedicated it to American abolitionists [Gulamgiri, 1873].\n\nThis wada still matters because it shows reform needn't come from power—it can come from those willing to be cast out for it.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 2,
+          "persona_fit": 4,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 3
+        },
+        "notes": "Strong Italian analogy (Bruno vs. Medici) genuinely captures structural opposition to power. However, multiple claims lack source tracing: Fatima Sheikh teaching 'alongside' Savitribai, Usman Sheikh's home, Satyashodhak Samaj founding from 'this base,' and the dedication to American abolitionists are all unverified from provided sources. The Giordano Bruno comparison risks flattening caste dynamics into European heresy frameworks.",
+        "needs_revision": true,
+        "revision_request": "Remove or source-trace all claims about Fatima Sheikh, Usman Sheikh, Satyashodhak Samaj founding location, and Gulamgiri dedication. The Bruno/Medici structural analogy is excellent—keep it—but ensure every factual claim maps to a provided source. If the sources don't mention these allies or institutional details, do not include them. Tighten to what can be proven from [1], [2], [3]."
+      }
+    },
+    {
+      "prompt_id": "p10",
+      "stop_id": "phule-wada",
+      "persona_id": "first-timer",
+      "generator": "Claude Sonnet 4.5",
+      "judge": "Claude Haiku 4.5",
+      "narrative": "You're standing in front of what was home — not a monument, but a house where two people made a choice that cracked open the future.\n\nJanuary 1, 1848: Jyotirao and Savitribai Phule opened India's first indigenously run girls' school, not here, but nearby at Bhide Wada [Wikipedia, 1848]. Phule Wada was where they *lived* — where Savitribai, married at nine and taught to read by her husband, planned her lessons. Where she folded a second sari into her bag each morning, knowing the walk to school meant stones, mud, cow dung flung by those who believed girls — especially Dalit and Shudra girls — had no right to learn [Pune's response, 1848-1851].\n\nBy 1851, they were running three schools with 150 students [Wikipedia, 1848]. This house became the nerve centre: a refuge for pregnant widows facing infanticide, headquarters of the Satyashodhak Samaj (\"Truth Seekers\") founded in 1873, a place where Hindu, Muslim, and Dalit educators worked side by side — a deliberate model of the casteless society they were building [Pune's response, 1848-1851; Wikipedia, 1848]. That same year, Jyotirao published *Gulamgiri* (\"Slavery\"), dedicating it to American abolitionists, reframing caste as India's own slavery [Gulamgiri, 1873].\n\nThis place still matters because what started here — the idea that education is a right, not a privilege guarded by birth — is still unfinished work.",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 3,
+          "persona_fit": 5,
+          "cultural_sensitivity": 4,
+          "source_bias_awareness": 3
+        },
+        "notes": "The narrative achieves strong persona fit and respectful framing, but conflates Bhide Wada (the school location) with Phule Wada (their residence) without clarifying this distinction, and attributes claims about the Satyashodhak Samaj and widow refuge to sources that do not support them. The claim about 150 students by 1851 appears unsourced. Source handling treats Wikipedia and secondary reconstruction uncritically.",
+        "needs_revision": true,
+        "revision_request": "1) Explicitly clarify that the school opened at Bhide Wada, not Phule Wada, to avoid reader confusion about location. 2) Remove or footnote the claims about the Satyashodhak Samaj headquarters, widow infanticide refuge, and 'Hindu, Muslim, and Dalit educators working side by side' — these do not appear in the provided sources and risk hallucination. 3) Flag the '150 students by 1851' figure as unverified in your sources. 4) Consider adding a note on source provenance (e.g., 'Wikipedia cites primary records') to signal critical awareness of secondary mediation. The closing sentence is strong and should remain."
+      }
+    },
+    {
+      "prompt_id": "p10",
+      "stop_id": "phule-wada",
+      "persona_id": "first-timer",
+      "generator": "Claude Haiku 4.5",
+      "judge": "Claude Sonnet 4.5",
+      "narrative": "# Phule Wada: Where a Revolution Began at Home\n\nYou're standing in front of the residence where Jyotirao and Savitribai Phule lived and, from here, launched one of India's most radical experiments in equality. This isn't where the first girls' school opened—that was elsewhere, at a supporter's home—but this wada became something equally important: the operational headquarters of their life's work [Source 1, 1848].\n\nWhen Savitribai walked to teach those first girls in 1848, she carried a spare sari. Stones and dung were thrown at her by people from Pune's orthodox brahmin families who saw her work as an affront [Source 2, 1848]. Yet she and Jyotirao refused to retreat. From this house, they expanded to three schools within three years, enrolled around 150 girls, and later founded the Satyashodhak Samaj—a society deliberately built across Hindu, Muslim, and Dalit lines, modeling the casteless world they wanted to create [Source 1, 1848; Source 2, 1848].\n\nBy 1873, Jyotirao had articulated their vision globally in *Gulamgiri*, comparing caste to slavery and dedicating the work to American abolitionists, placing Pune's struggle in a worldwide fight for human dignity [Source 3, 1873].\n\nThis place still matters because the Phules asked a question that echoes through modern Pune: who gets to be educated, and who gets to decide?",
+      "critique": {
+        "scores": {
+          "factual_accuracy": 2,
+          "persona_fit": 4,
+          "cultural_sensitivity": 3,
+          "source_bias_awareness": 3
+        },
+        "notes": "Strong persona fit with cinematic present-tense opening and resonant closing question. However, multiple unsourced claims severely damage factual accuracy: the narrative states this was the Phules' residence (not in sources), that they expanded to 'three schools within three years' with '150 girls enrolled' (not in sources), and that Satyashodhak Samaj was founded from this house and built 'across Hindu, Muslim, and Dalit lines' (not in sources). The dedication of Gulamgiri to American abolitionists is mentioned but not sourced. Cultural sensitivity is adequate but could better acknowledge the complexity of 'orthodox Brahmin society' as a segment, not a monolith.",
+        "needs_revision": true,
+        "revision_request": "Remove or properly source all claims not traceable to provided sources: whether this wada was the Phules' residence, the 'three schools/150 girls' figures, details about Satyashodhak Samaj's composition and founding location, and the dedication of Gulamgiri. If the title uses 'Phule Wada' but sources don't confirm this was their home, acknowledge that ambiguity explicitly in the opening sentence. Retain only what Sources 1-3 directly support."
+      }
+    }
+  ]
+}

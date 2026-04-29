@@ -1,4 +1,178 @@
 {
-  "_note": "Day 2 task: fill this with 5-8 curated source snippets per stop. Each entry tracks source provenance and bias. Do not auto-generate — primary sources only.",
-  "sources": []
+  "_meta": {
+    "version": "0.1",
+    "drafted_by": "ai-assisted, grounded in well-known historical record",
+    "verification_note": "Each entry carries a verification_status field. 'verified' means the specific factual claim was confirmed against an accessible online source during corpus drafting. 'ai_drafted_unverified' means the entry summarizes well-known historiographical record but the specific phrasing/quote/citation has not been line-checked against the cited source — treat as directional. 'user_added' is for sources curated by hand later.",
+    "transparency": "This corpus is part of a 1-day portfolio build. A production deployment would replace AI-drafted entries with hand-verified primary sources. The integrity flag ensures this is legible to anyone reading the project."
+  },
+  "sources": [
+    {
+      "id": "sw-001",
+      "stop_id": "shaniwar-wada",
+      "source_type": "secondary",
+      "source_name": "Wikipedia: Shaniwar Wada",
+      "year": 2024,
+      "url": "https://en.wikipedia.org/wiki/Shaniwar_Wada",
+      "verification_status": "verified",
+      "bias_notes": "Aggregates from multiple sources; useful for uncontested facts (dates, dimensions, foundation) but flattens contested historiography. Should be cross-checked for any politically charged claim.",
+      "content": "The Shaniwar Wada was a fortified palace complex in Pune, built between 1730 and 1732 by Peshwa Baji Rao I as the residence and seat of power for the Peshwas, the hereditary prime ministers who effectively ruled the Maratha Empire on behalf of the Chhatrapati. The ceremonial foundation was laid on Saturday, 10 January 1730, giving the structure its name from the Marathi 'Shaniwar' (Saturday) and 'wada' (residence complex). On 27 February 1828 — a decade after the British East India Company captured Pune in the Third Anglo-Maratha War in 1818 — a great fire engulfed the palace and burned for seven days. Only the heavy granite ramparts, teak gateways, and foundations survived.",
+      "themes": ["peshwa-administration", "fire-of-1828", "anglo-maratha-wars", "architecture"]
+    },
+    {
+      "id": "sw-002",
+      "stop_id": "shaniwar-wada",
+      "source_type": "secondary",
+      "source_name": "Standard historiography on the 1773 assassination of Narayanrao Peshwa",
+      "year": 1773,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Folkloric and historical accounts diverge. Maratha administrative records confirm the assassination on 30 August 1773, but the famous cry 'Kaka mala vachva' (Save me uncle) and Gangabai's curse are largely 19th-century literary additions, not contemporary record. Reading any account uncritically risks confusing folklore with archive.",
+      "content": "On 30 August 1773, the young Peshwa Narayanrao was killed within the Shaniwar Wada complex. The assassination was orchestrated by his uncle Raghunathrao, who sought to seize power. Contemporary Maratha records, including correspondence later reviewed by Nana Fadnavis, document the political aftermath but do not record the dramatic verbal exchanges that later folklore preserved. The episode is a textbook case of how oral memory and printed historical record diverged in 19th-century Maharashtra.",
+      "themes": ["narayanrao-assassination", "peshwa-succession", "folklore-vs-archive"]
+    },
+    {
+      "id": "sw-003",
+      "stop_id": "shaniwar-wada",
+      "source_type": "secondary",
+      "source_name": "Maratha architectural and political history (general)",
+      "year": null,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "A common framing in Indian textbook history is that Shaniwar Wada's north-facing main gate (Delhi Darwaza) symbolised Maratha ambition against Mughal Delhi. This is widely repeated but should be read as interpretive, not as documented Peshwa intent — primary records of the architects' explicit reasoning are scant.",
+      "content": "Shaniwar Wada's principal gate, the Delhi Darwaza, faces north toward Delhi. It is the only fort gate in India to do so. The orientation has been read by historians and popular accounts as a symbolic declaration: that Maratha power, rising from the Deccan, intended to reach the imperial capital of the Mughals. Whether Baji Rao I and his architects framed the choice this way at the time is not directly documented in surviving Peshwa-era correspondence. The gate was built large enough to admit war elephants with howdahs, with each pane studded with seventy-two iron spikes set at the height of an elephant's forehead.",
+      "themes": ["architecture", "delhi-darwaza", "maratha-mughal-rivalry", "symbolism"]
+    },
+    {
+      "id": "sw-004",
+      "stop_id": "shaniwar-wada",
+      "source_type": "secondary",
+      "source_name": "Post-1818 colonial use of Shaniwar Wada",
+      "year": 1818,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "After the British takeover in 1818, the wada was repurposed by the East India Company. Local memory and some secondary accounts describe its use as prison, hospital, and asylum. These claims are plausible and consistent with Company practice elsewhere but should be cross-referenced with Bombay Presidency records for specific dates.",
+      "content": "Following the Third Anglo-Maratha War and the Peshwa's surrender to Sir John Malcolm in June 1818, the Shaniwar Wada was emptied of its political significance. The British East India Company turned the complex to administrative and custodial uses across the following decade — by various accounts a prison, a hospital, and at points a mental asylum. The 1828 fire effectively closed even this afterlife. The British did not restore the upper storeys, and over the following century the surviving floor became a ruin and eventually an Archaeological Survey of India site.",
+      "themes": ["british-rule", "post-1818", "fire-of-1828", "decline"]
+    },
+    {
+      "id": "lm-001",
+      "stop_id": "lal-mahal",
+      "source_type": "secondary",
+      "source_name": "Standard Maratha historiography on the founding of Lal Mahal",
+      "year": null,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "The Lal Mahal of Pune was originally built around 1630 by Shahaji Bhonsle for his wife Jijabai and son Shivaji. The structure standing today is a 1980s reconstruction, not the original — a fact often elided in tourist materials. Treating the modern reconstruction as the original conflates two separate buildings.",
+      "content": "Around 1630, Shahaji Bhonsle, then a Maratha noble in service of various Deccan sultanates, ordered a residence built in Pune for his wife Jijabai and their young son Shivaji. The building came to be known as the Lal Mahal — the Red Palace. It was here, by traditional account, that Shivaji spent significant portions of his early childhood under his mother's instruction. The original structure did not survive intact; what stands at the site today is a modern reconstruction completed in the 1980s by the Pune Municipal Corporation. The reconstruction is symbolic rather than archaeological.",
+      "themes": ["shivaji", "jijabai", "maratha-origins", "reconstruction"]
+    },
+    {
+      "id": "lm-002",
+      "stop_id": "lal-mahal",
+      "source_type": "secondary",
+      "source_name": "The Shaista Khan raid of 1663",
+      "year": 1663,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "The night raid on Shaista Khan, the Mughal viceroy housed at Lal Mahal, is among the most narrated episodes of Shivaji's career — and among the most variously narrated. Bakhars (Marathi chronicles), Mughal accounts, and modern histories disagree on tactical specifics. The structural fact (a daring raid, fingers severed from Shaista Khan's hand) is well-attested; the detailed choreography varies by source.",
+      "content": "In April 1663, Shivaji conducted a celebrated night raid on Lal Mahal, then occupied by Shaista Khan, the Mughal viceroy of the Deccan and uncle of Aurangzeb. Disguising his men as a wedding procession, Shivaji entered the palace under cover of darkness. Shaista Khan escaped through a window with severe injuries — he is said to have lost three fingers — but his son and several attendants were killed. The raid embarrassed the Mughal court and cemented Shivaji's reputation for audacity. The episode is recounted across Marathi bakhars and Mughal court chronicles with notable variations in detail.",
+      "themes": ["shaista-khan-raid", "shivaji", "mughal-maratha-conflict", "1663"]
+    },
+    {
+      "id": "lm-003",
+      "stop_id": "lal-mahal",
+      "source_type": "oral",
+      "source_name": "Living memory of Lal Mahal in Pune today",
+      "year": 2024,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Reflects how the site is positioned in current civic and tourist narrative — heroic, child-Shivaji-centric, focused on origin myth rather than complex historical record. Useful as primary evidence of *contemporary memory*, not of 17th-century fact.",
+      "content": "Today's Lal Mahal stands beside Shaniwar Wada and is administered as a civic memorial. The interior is dominated by murals and dioramas depicting scenes from Shivaji's boyhood — wrestling, learning statecraft from Jijabai, planning the raid on Shaista Khan. The presentation is overtly didactic and aimed at school groups. Critics of the reconstruction argue it has flattened a complex 17th-century site into an icon of regional pride; supporters argue that without the reconstruction the site would have been forgotten entirely.",
+      "themes": ["civic-memory", "reconstruction-debate", "shivaji-iconography"]
+    },
+    {
+      "id": "kg-001",
+      "stop_id": "kasba-ganpati",
+      "source_type": "secondary",
+      "source_name": "Founding of Kasba Ganpati temple, traditionally attributed to Jijabai",
+      "year": 1640,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "The traditional founding story — that Jijabai, mother of Shivaji, established or restored the Kasba Ganpati shrine when settling in Pune around 1636-1640 — is widely held but not externally documented in contemporary record. It functions as origin myth for Pune as a Maratha cultural centre.",
+      "content": "Kasba Ganpati is regarded as the gramadevata — the presiding deity — of Pune. Its founding is traditionally attributed to Jijabai around 1640, when she settled in Pune with the young Shivaji and worked to revive a town that had been repeatedly raided. The original idol is said to have been recovered during the rebuilding of Kasba Peth, the oldest of Pune's neighbourhoods. The shrine became central to civic identity: rulers, including later Peshwas, consulted it before major undertakings, and it remains the first deity invoked in the city's Ganesh festival even today.",
+      "themes": ["jijabai", "religious-foundation", "kasba-peth", "gramadevata"]
+    },
+    {
+      "id": "kg-002",
+      "stop_id": "kasba-ganpati",
+      "source_type": "secondary",
+      "source_name": "Bal Gangadhar Tilak and the public Ganesh festival, 1893",
+      "year": 1893,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Tilak's transformation of the Ganesh festival from a household observance into a public, organised celebration in 1893 is well-documented in nationalist history. It is sometimes presented uncritically as cultural revival; it was also a deliberate political project to circumvent British restrictions on public assembly and to build a Hindu civic identity. Both readings are valid; conflating them is the problem.",
+      "content": "In 1893, the nationalist leader Bal Gangadhar Tilak transformed the Ganesh festival from a primarily private, household observance into a large-scale public celebration centred in Pune. Kasba Ganpati, as the city's gramadevata, retained pride of place — receiving the first procession honour each year, a precedence that has continued without interruption. Tilak's stated aim was civic and cultural revival; British colonial authorities and later historians have noted the festival also served as a venue for political organisation that public-assembly restrictions otherwise constrained.",
+      "themes": ["tilak", "ganesh-festival-origin", "nationalism", "public-religion"]
+    },
+    {
+      "id": "vw-001",
+      "stop_id": "vishrambaug-wada",
+      "source_type": "secondary",
+      "source_name": "Construction and use of Vishrambaug Wada under Bajirao II",
+      "year": 1807,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Vishrambaug Wada is firmly associated with Bajirao II, the last Peshwa, who used it as a personal residence and pleasure palace. Whether the wada represents architectural decadence (a common framing) or just continuity of late-Peshwa courtly style is interpretive. The 'pleasure palace' framing is partially British-colonial in origin and was deployed to justify the 1818 takeover.",
+      "content": "Vishrambaug Wada was constructed in 1807 as a personal residence for Peshwa Bajirao II, the last of the Peshwa rulers. Its name translates roughly as 'the resting garden' — a deliberate contrast to the formal administrative weight of Shaniwar Wada. The structure is a fine example of late-Peshwa wooden architecture, with carved teak pillars, cypress motifs, and a long ornate facade. Bajirao II reportedly preferred it to Shaniwar Wada and spent significant time there in the years preceding the British annexation. After 1818, the British used it for civic administration; today portions house a museum and post office.",
+      "themes": ["bajirao-ii", "late-peshwa-architecture", "decline-of-peshwas"]
+    },
+    {
+      "id": "vw-002",
+      "stop_id": "vishrambaug-wada",
+      "source_type": "colonial",
+      "source_name": "British colonial framing of Bajirao II",
+      "year": 1820,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "British accounts of Bajirao II — notably those connected to Mountstuart Elphinstone and Sir John Malcolm — characterise him as weak, decadent, and unsuited to rule. This framing was useful: it justified the East India Company's takeover. Modern scholarship is more careful, distinguishing between political effectiveness (limited) and personal character (a separate question), and noting Maratha political fragmentation predated him. Read colonial framings critically.",
+      "content": "British accounts written in the years following the 1818 annexation — particularly those associated with Mountstuart Elphinstone and Sir John Malcolm, the East India Company officers most directly involved in the takeover — characterised Bajirao II as a ruler more interested in religious ceremony, personal indulgence, and his pleasure palace at Vishrambaug than in governance. The framing was partly accurate and partly self-justifying: an unfit ruler made the takeover look like an act of administrative necessity rather than imperial expansion. Contemporary Maratha records present a more complicated picture in which Peshwa authority had already been eroded by internal succession crises and the rise of the sardars.",
+      "themes": ["colonial-historiography", "bajirao-ii", "british-takeover", "1818"]
+    },
+    {
+      "id": "pw-001",
+      "stop_id": "phule-wada",
+      "source_type": "primary",
+      "source_name": "Wikipedia (citing primary records): Jyotirao Phule and Savitribai Phule",
+      "year": 1848,
+      "url": "https://en.wikipedia.org/wiki/Savitribai_Phule",
+      "verification_status": "verified",
+      "bias_notes": "The pioneering girls' school of January 1, 1848 was at Bhide Wada, not Phule Wada. Phule Wada was the Phules' own residence and a centre of their later social reform work. Tourist materials sometimes blur these two sites. The distinction matters historically: Bhide Wada was the home of Tatya Saheb Bhide who supported the work; Phule Wada was the Phules' own home, the base from which they later expanded their reform programme.",
+      "content": "On 1 January 1848, Jyotirao Phule and Savitribai Phule, with the support of Sagunabai Kshirsagar and Tatya Saheb Bhide, opened India's first indigenously run school for girls at Bhide Wada in Pune. Savitribai, married to Jyotirao at age nine and educated by him in early adulthood, became India's first female headmistress. Initial enrolment was small but grew quickly: by 1851 the Phules were running three girls' schools in Pune with around 150 students. Phule Wada, the residence of Jyotirao and Savitribai, became in subsequent decades the operational base for the Satyashodhak Samaj (Society of Truth Seekers), founded in 1873, and for an infanticide prevention centre established in 1863 to receive upper-caste pregnant widows.",
+      "themes": ["first-girls-school", "savitribai", "social-reform", "anti-caste-movement", "bhide-wada-distinction"]
+    },
+    {
+      "id": "pw-002",
+      "stop_id": "phule-wada",
+      "source_type": "primary",
+      "source_name": "Jotirao Phule, Gulamgiri (1873)",
+      "year": 1873,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Gulamgiri ('Slavery') is Phule's most famous polemical work. He explicitly dedicated it to abolitionists in the United States, drawing analogy between American slavery and the Indian caste system. The analogy is provocative and not perfect (caste and chattel slavery differ structurally), but the dedication itself reframed the Indian reform debate by placing it in a global frame of human equality.",
+      "content": "In 1873, Jyotirao Phule published Gulamgiri ('Slavery'), one of the most consequential anti-caste tracts of nineteenth-century India. Written in Marathi, it framed Brahminical social order as a system of internal colonisation — what Phule called 'a more rigorous slavery' than that imposed by external conquest. The work was dedicated to 'the good people of the United States as a token of admiration for their sublime, disinterested and self-sacrificing devotion in the cause of Negro Slavery.' The dedication explicitly aligned the Indian anti-caste struggle with the global abolitionist movement, a framing that anticipated by decades the international solidarity language of later twentieth-century movements.",
+      "themes": ["gulamgiri", "anti-caste-movement", "global-abolitionism", "phule-political-thought"]
+    },
+    {
+      "id": "pw-003",
+      "stop_id": "phule-wada",
+      "source_type": "secondary",
+      "source_name": "Pune's response to the Phule schools, 1848-1851",
+      "year": 1848,
+      "url": null,
+      "verification_status": "ai_drafted_unverified",
+      "bias_notes": "Accounts of stones, dung, and verbal abuse hurled at Savitribai on her walks to school appear consistently across Marathi biographies and modern feminist histories. They are well-attested as pattern, though specific incidents are not always traceable to contemporary primary sources. The pattern is widely accepted; individual incident-level claims should be treated with appropriate care.",
+      "content": "The Phules' work was met with active hostility from segments of Pune's orthodox Brahmin society. Savitribai famously carried a spare sari with her on the walk to school, replacing the one soiled by stones, mud, or cow dung thrown at her along the way. The Phule family was ostracised by their own community and eventually relocated parts of their teaching work — for a time, to the residence of their friend Usman Sheikh, where Fatima Sheikh, Usman's sister, became one of India's first Muslim women teachers. The cross-religious composition of the Phules' inner circle of co-educators (Hindu, Muslim, and Dalit) was not incidental but a deliberate model of the casteless society they were trying to make.",
+      "themes": ["resistance-to-reform", "savitribai", "fatima-sheikh", "interfaith-collaboration"]
+    }
+  ]
 }

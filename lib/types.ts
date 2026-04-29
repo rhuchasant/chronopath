@@ -28,13 +28,19 @@ export interface Persona {
 
 export type SourceType = "primary" | "secondary" | "oral" | "colonial" | "wiki";
 
+export type VerificationStatus =
+  | "verified"
+  | "ai_drafted_unverified"
+  | "user_added";
+
 export interface Source {
   id: string;
   stop_id: string;
   source_type: SourceType;
   source_name: string;
-  year?: number;
-  url?: string;
+  year?: number | null;
+  url?: string | null;
+  verification_status: VerificationStatus;
   bias_notes: string;
   content: string;
   themes: string[];
@@ -54,10 +60,10 @@ export interface Narrative {
 }
 
 export interface CritiqueScore {
-  factual_accuracy: number;       // 0-5
-  persona_fit: number;            // 0-5
-  cultural_sensitivity: number;   // 0-5
-  source_bias_awareness: number;  // 0-5
+  factual_accuracy: number;
+  persona_fit: number;
+  cultural_sensitivity: number;
+  source_bias_awareness: number;
 }
 
 export interface Critique {

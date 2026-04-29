@@ -5,7 +5,7 @@ import {
   pathReasonerUserPrompt,
 } from "@/lib/agents/path-reasoner";
 import { getWalk } from "@/lib/data";
-import type { PathReasoning } from "@/lib/types";
+import type { PathReasoning, RetrievedSource } from "@/lib/types";
 import { NextRequest } from "next/server";
 
 export const runtime = "nodejs";
@@ -21,28 +21,46 @@ export async function POST(req: NextRequest) {
     return new Response("not found", { status: 404 });
   }
 
-  const sources = [
-    ...(await retrieveSources(fromStopId, "path-reasoning", 3)),
-    ...(await retrieveSources(toStopId, "path-reasoning", 3)),
-  ];
+  // Fetch sources separately and tag each with its endpoint
+  // so the prompt can clearly say which source describes which stop.
+  const fromSources = await retrieveSources(
+    fromStopId,
+    "path reasoning historical geography",
+    3
+  );
+  const toSources = await retrieveSources(
+    toStopId,
+    "path reasoning historical geography",
+    3
+  );
+
+  const labeledFrom: RetrievedSource[] = fromSources.map((s) => ({
+    ...s,
+    source_name: `[ABOUT ${fromStop.name}] ${s.source_name}`,
+  }));
+  const labeledTo: RetrievedSource[] = toSources.map((s) => ({
+    ...s,
+    source_name: `[ABOUT ${toStop.name}] ${s.source_name}`,
+  }));
+
+  const sources = [...labeledFrom, ...labeledTo];
 
   if (sources.length === 0) {
     const stub: PathReasoning = {
       from_stop: fromStop.id,
       to_stop: toStop.id,
-      primary_reason:
-        "[Day 1 placeholder] Path reasoning will be generated once the corpus is curated on Day 2.",
+      primary_reason: "No sources available for either endpoint.",
       secondary_reasons: [],
       counterfactual: "",
       confidence: 0,
-      uncertainty_notes: "Corpus not yet populated.",
+      uncertainty_notes: "Corpus not populated for these stops.",
     };
     return Response.json(stub);
   }
 
   const result = await anthropic().messages.create({
     model: DEFAULT_MODEL,
-    max_tokens: 800,
+    max_tokens: 1000,
     system: pathReasonerSystemPrompt(),
     messages: [
       {

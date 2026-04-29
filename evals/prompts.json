@@ -1,23 +1,65 @@
 {
-  "_note": "Day 5 task: populate with 10 (stop, persona) prompts to run through generator → judge pipeline.",
+  "_note": "Eval prompts: 10 (stop, persona) pairs hand-picked to span the corpus and stress-test persona adaptation, source-bias awareness, and factual grounding.",
   "prompts": [
     {
-      "id": "p1",
+      "id": "p01",
       "stop_id": "shaniwar-wada",
       "persona_id": "italian-tourist",
-      "expected_anchors": ["Peshwa", "Medici or Venetian analogy", "1828 fire"]
+      "expected_anchors": ["medici-or-venetian-analogy", "1828-fire-or-1818-takeover", "peshwa-as-prime-minister-not-king"]
     },
     {
-      "id": "p2",
+      "id": "p02",
       "stop_id": "shaniwar-wada",
       "persona_id": "schoolkid",
-      "expected_anchors": ["sensory detail", "single scene", "no date dump"]
+      "expected_anchors": ["sensory-detail", "single-scene-not-date-dump", "ends-with-question-or-hook"]
     },
     {
-      "id": "p3",
-      "stop_id": "phule-wada",
+      "id": "p03",
+      "stop_id": "shaniwar-wada",
       "persona_id": "historian",
-      "expected_anchors": ["caste reform context", "Savitribai", "named source"]
+      "expected_anchors": ["folklore-vs-archive-on-narayanrao", "named-source-citation", "interpretive-uncertainty"]
+    },
+    {
+      "id": "p04",
+      "stop_id": "lal-mahal",
+      "persona_id": "first-timer",
+      "expected_anchors": ["modern-reconstruction-acknowledged", "shaista-khan-raid", "present-tense-conversational"]
+    },
+    {
+      "id": "p05",
+      "stop_id": "lal-mahal",
+      "persona_id": "historian",
+      "expected_anchors": ["bakhar-vs-mughal-account-divergence", "1980s-reconstruction-distinction", "named-sources"]
+    },
+    {
+      "id": "p06",
+      "stop_id": "kasba-ganpati",
+      "persona_id": "italian-tourist",
+      "expected_anchors": ["civic-religion-analogy", "tilak-1893-political-context", "gramadevata-explained"]
+    },
+    {
+      "id": "p07",
+      "stop_id": "vishrambaug-wada",
+      "persona_id": "historian",
+      "expected_anchors": ["colonial-vs-postcolonial-framing", "elphinstone-or-malcolm-named", "bajirao-ii-political-effectiveness-vs-character"]
+    },
+    {
+      "id": "p08",
+      "stop_id": "vishrambaug-wada",
+      "persona_id": "schoolkid",
+      "expected_anchors": ["concrete-image-of-place", "no-condescension", "single-scene"]
+    },
+    {
+      "id": "p09",
+      "stop_id": "phule-wada",
+      "persona_id": "italian-tourist",
+      "expected_anchors": ["bhide-wada-distinction", "1848-first-girls-school", "abolitionist-analogy-or-equivalent"]
+    },
+    {
+      "id": "p10",
+      "stop_id": "phule-wada",
+      "persona_id": "first-timer",
+      "expected_anchors": ["savitribai-foregrounded", "satyashodhak-or-gulamgiri", "still-matters-today-line"]
     }
   ]
 }

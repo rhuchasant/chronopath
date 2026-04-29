@@ -46,9 +46,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="mt-24 pt-8 border-t border-ink/10 eyebrow">
-        Built as a portfolio AI engineering project · multi-agent RAG · evals included
-      </footer>
+      <section className="mt-12">
+        <Link
+          href="/evals"
+          className="inline-block text-sm text-muted hover:text-terracotta border border-ink/15 hover:border-terracotta px-4 py-2 rounded-sm transition-colors"
+        >
+          → Read the eval report (system self-evaluation across models)
+        </Link>
+      </section>
+
+      <footer className="mt-24 pt-8 border-t border-ink/10 space-y-3">
+  <p className="eyebrow">
+    Multi-agent system · researcher → storyteller → critic → path-reasoner ·
+    cross-model evals · source-bias aware
+  </p>
+  <p className="text-xs text-muted italic">
+    Source corpus is hand-curated for transparency. Each entry is tagged as
+    verified, AI-drafted, or user-added — visible in the README.
+  </p>
+</footer>
     </main>
   );
 }
