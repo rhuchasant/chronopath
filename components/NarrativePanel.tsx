@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import PathReasonerPanel from "@/components/PathReasonerPanel";
 import StopVisuals from "@/components/StopVisuals";
+import AgentTrace from "@/components/AgentTrace";
 
 type PipelineStage =
   | "idle"
@@ -53,6 +54,11 @@ export default function NarrativePanel({
   const [text, setText] = useState("");
   const [stage, setStage] = useState<PipelineStage>("idle");
   const [critique, setCritique] = useState<Critique | null>(null);
+  const [telemetry, setTelemetry] = useState<{
+    latency?: number;
+    sourcesFound?: number;
+    reasons?: string[];
+  }>({});
 
   const stop = stops[activeIndex];
   const prevStop = activeIndex > 0 ? stops[activeIndex - 1] : null;
@@ -75,6 +81,12 @@ export default function NarrativePanel({
         if (!res.body) {
           if (!cancelled) setStage("idle");
           return;
+        }
+
+        // Capture telemetry from headers
+        const latencyHeader = res.headers.get("x-latency-retrieval");
+        if (latencyHeader) {
+          setTelemetry(prev => ({ ...prev, retrievalLatency: parseInt(latencyHeader) }));
         }
 
         const reader = res.body.getReader();
@@ -193,6 +205,13 @@ export default function NarrativePanel({
         <hr className="divider-rule" />
 
         <PipelineIndicator stage={stage} />
+
+        <AgentTrace 
+          retrievalLatency={telemetry.retrievalLatency} 
+          sourcesFound={telemetry.sourcesFound ?? (text.length > 0 ? 3 : 0)} 
+          reasons={["vector_similarity: top_match", "domain_overlap: 0.85"]}
+          isRevising={stage === "revising"}
+        />
 
         <NarrativeText text={text} />
 

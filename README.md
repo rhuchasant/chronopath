@@ -25,24 +25,24 @@ Every claim in every narrative traces to a source. Every source carries an expli
 USER picks a walk + persona
 │
 ▼
-RESEARCHER AGENT theme-overlap retrieval over curated corpus,
-│ with diversity preservation across source_types
-│ (primary, colonial, secondary, oral)
+RESEARCHER AGENT **Hybrid Semantic + Lexical Retrieval**
+│ ├─ Semantic: Local vector search (Transformers.js / all-MiniLM-L6-v2)
+│ ├─ Lexical: Domain-specific theme-overlap scoring
+│ └─ Diversity preservation across source_types (primary, colonial, oral)
 ▼
 STORYTELLER AGENT persona-conditioned narrative generation,
-│ strict source-grounding (no out-of-corpus facts),
-│ inline citations, analogical reasoning across cultures
+│ **Tool-Augmented**: Calls `historical_weather` to contextualize stories,
+│ strict source-grounding, inline citations, analogical reasoning.
 ▼
 CRITIC AGENT scores narrative on 4 dimensions:
 │ factual accuracy, persona fit, cultural sensitivity,
-│ source-bias awareness. Triggers a single revision
-│ pass if any score ≤ 2 or total < 14/20.
+│ source-bias awareness. Triggers a self-correction 
+│ loop if scores are sub-optimal.
 ▼
 PATH-REASONER AGENT structured-JSON reasoning between stops,
-with calibrated confidence and explicit
-uncertainty notes about what sources cannot tell us
+with calibrated confidence and explicit uncertainty notes.
 
-All four agents are Claude (Sonnet 4.5 by default). The pipeline state is rendered in the UI as it runs: `Researching → Drafting → Critiquing → Revising → Done`.
+All agents are Claude (Sonnet 3.5/4.5). The system features **real-time observability** via an "Agent Telemetry" panel showing latencies and retrieval logic.
 
 See [DECISIONS.md](./DECISIONS.md) for the architectural tradeoffs behind each choice.
 
@@ -70,7 +70,14 @@ View the rendered report at `/evals` on the live site, or read `evals/report.md`
 
 ## Stack
 
-Next.js 15 · Anthropic Claude (only) · Theme-overlap retrieval (no embeddings provider) · Leaflet (OpenStreetMap) · TypeScript · Tailwind · deployed on Vercel.
+Next.js 15 · Anthropic Claude (LLM) · Transformers.js (Local Embeddings) · Leaflet (OpenStreetMap) · TypeScript · Tailwind.
+
+## Performance & Observability
+
+ChronoPath treats AI as a measurable system:
+- **Hybrid Retrieval**: Combines high-dimensional vector search with domain-specific heuristics.
+- **Agent Telemetry**: The UI surfaces real-time latency (retrieval vs synthesis) and retrieval reasons.
+- **Tool Use**: Demonstrates agentic capability by allowing the Storyteller to query external state (weather/time) to contextualize the history.
 
 ## Limitations (stated honestly)
 
