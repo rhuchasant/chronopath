@@ -1,0 +1,23 @@
+{
+  "_note": "Day 5 task: populate with 10 (stop, persona) prompts to run through generator → judge pipeline.",
+  "prompts": [
+    {
+      "id": "p1",
+      "stop_id": "shaniwar-wada",
+      "persona_id": "italian-tourist",
+      "expected_anchors": ["Peshwa", "Medici or Venetian analogy", "1828 fire"]
+    },
+    {
+      "id": "p2",
+      "stop_id": "shaniwar-wada",
+      "persona_id": "schoolkid",
+      "expected_anchors": ["sensory detail", "single scene", "no date dump"]
+    },
+    {
+      "id": "p3",
+      "stop_id": "phule-wada",
+      "persona_id": "historian",
+      "expected_anchors": ["caste reform context", "Savitribai", "named source"]
+    }
+  ]
+}

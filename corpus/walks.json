@@ -1,0 +1,60 @@
+{
+  "walks": [
+    {
+      "id": "peshwa-core",
+      "title": "The Peshwa Core",
+      "subtitle": "Walking through the seat of the Maratha Confederacy",
+      "era": "1640 – 1858",
+      "duration_min": 45,
+      "distance_km": 1.8,
+      "description": "Five stops through the heart of old Pune, tracing the rise and fall of the Maratha capital — from Shivaji's boyhood palace to the wada where the Peshwas ruled an empire, ending at the home of Jotirao Phule, who imagined a different future for it.",
+      "stops": [
+        {
+          "id": "shaniwar-wada",
+          "name": "Shaniwar Wada",
+          "subtitle": "Seat of the Peshwas",
+          "lat": 18.5195,
+          "lng": 73.8553,
+          "year_built": 1732,
+          "themes": ["peshwa-administration", "fire-of-1828", "anglo-maratha-wars", "architecture"]
+        },
+        {
+          "id": "lal-mahal",
+          "name": "Lal Mahal",
+          "subtitle": "Where Shivaji grew up",
+          "lat": 18.5181,
+          "lng": 73.8559,
+          "year_built": 1630,
+          "themes": ["shivaji", "shaista-khan-raid", "maratha-origins"]
+        },
+        {
+          "id": "kasba-ganpati",
+          "name": "Kasba Ganpati",
+          "subtitle": "The presiding deity of Pune",
+          "lat": 18.5200,
+          "lng": 73.8560,
+          "year_built": 1640,
+          "themes": ["jijabai", "religious-foundation", "ganesh-festival-origin"]
+        },
+        {
+          "id": "vishrambaug-wada",
+          "name": "Vishrambaug Wada",
+          "subtitle": "The last Peshwa's pleasure palace",
+          "lat": 18.5152,
+          "lng": 73.8559,
+          "year_built": 1807,
+          "themes": ["bajirao-ii", "decline-of-peshwas", "british-takeover"]
+        },
+        {
+          "id": "phule-wada",
+          "name": "Phule Wada",
+          "subtitle": "Home of Jotirao and Savitribai Phule",
+          "lat": 18.5141,
+          "lng": 73.8480,
+          "year_built": 1852,
+          "themes": ["social-reform", "first-girls-school", "anti-caste-movement", "savitribai"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "personas": [
+    {
+      "id": "italian-tourist",
+      "label": "Italian visitor",
+      "blurb": "First-time visitor from Florence. Knows European history well.",
+      "prompting_profile": "Find a genuine analogy from Italian history (Medici, Venetian Republic, Risorgimento, Garibaldi). The analogy must be structural, not surface — same kind of power dynamic, same kind of social tension. Avoid orientalism. Assume they've never heard of any Indian historical figure."
+    },
+    {
+      "id": "schoolkid",
+      "label": "Indian schoolkid (10–12)",
+      "blurb": "On a school trip. History is textbook-flat for them.",
+      "prompting_profile": "Use vivid sensory language. One scene, told like a story. No date dumps. Pick one detail from the sources that would make them go 'wait, really?'. End with a question that makes them want to ask their grandparent."
+    },
+    {
+      "id": "historian",
+      "label": "History researcher",
+      "blurb": "Academic. Wants source-aware nuance.",
+      "prompting_profile": "Foreground historiographical debate. Name your sources inline. Where colonial-era and post-colonial accounts disagree, say so. Do not flatten interpretive gaps. Cite year and source for any contested claim."
+    },
+    {
+      "id": "first-timer",
+      "label": "Curious traveler",
+      "blurb": "First-time in Pune, no specific background.",
+      "prompting_profile": "Conversational, present-tense, slightly cinematic. Connect what they're standing in front of to what's still alive in the city now. End with one sentence about why this place still matters today."
+    }
+  ]
+}
