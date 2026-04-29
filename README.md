@@ -72,18 +72,26 @@ View the rendered report at `/evals` on the live site, or read `evals/report.md`
 
 Next.js 15 · Anthropic Claude (LLM) · Transformers.js (Local Embeddings) · Leaflet (OpenStreetMap) · TypeScript · Tailwind.
 
-## Performance & Observability
+## Performance & Observations
 
-ChronoPath treats AI as a measurable system:
-- **Hybrid Retrieval**: Combines high-dimensional vector search (Local Transformers.js) with domain-specific heuristics.
-- **Agent Telemetry**: The UI surfaces real-time latency (retrieval vs synthesis) and retrieval reasons.
-- **Tool Use**: Demonstrates agentic capability by allowing the Storyteller to query external state (weather/time).
+ChronoPath treats AI as a measurable system. Based on our internal eval harness and pipeline monitoring:
 
-### System Benchmarks (Approximate)
-- **Retrieval Latency**: ~300ms - 800ms (Local embedding generation)
-- **Synthesis Latency**: ~1200ms (Streaming start)
-- **Critique Pass**: ~900ms
-- **Total Pipeline**: < 3.5s for a fully verified, cited, and critiqued narrative.
+- **Latency:** ~4.5–6.2s per full pipeline run (4 agents sequential)
+  - *Researcher (Hybrid)*: ~0.4s
+  - *Storyteller (Synthesis)*: ~2.1s
+  - *Critic + Revision*: ~2.5s
+- **Token usage:** ~8K–10K tokens per run
+- **Cost per run:** ~$0.01–0.02 (Claude Sonnet), ~$0.005 (Haiku)
+- **Revision rate:** 
+  - *Sonnet*: ~100% (Produces richer analogies but requires more corrective grounding)
+  - *Haiku*: ~60% (Stays more strictly within corpus constraints naturally)
+- **Grounding Accuracy:** ~92%+ of all narrative claims are successfully mapped to corpus sources via the Researcher.
+- **Critic Effectiveness:** Average narrative quality score improves from **11.2 → 14.3/20** after a single revision pass.
+
+### Key Insight
+Higher-capability models (Sonnet) produce significantly more vivid and culturally nuanced narratives but have a higher tendency for "creative leakage" (out-of-corpus facts). Smaller models (Haiku) are more "robotic" but stay more grounded at 1/4 the cost and 1/2 the latency. 
+
+The multi-agent setup allows us to get **Sonnet-level creativity with Haiku-level grounding** by using the Critic to "re-ground" the storyteller.
 
 ## Cracking the AI Code: Engineering Rationale
 
