@@ -1,24 +1,26 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, Suspense } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import { getPersonas } from "@/lib/data";
 import { buildCustomWalk } from "@/lib/route-builder";
 import NarrativePanel from "@/components/NarrativePanel";
 
 const WalkMap = dynamic(() => import("@/components/WalkMap"), { ssr: false });
 
-export default function CustomWalkPage() {
+function CustomWalkContent() {
   const searchParams = useSearchParams();
   const source = searchParams.get("source") ?? "";
   const destination = searchParams.get("destination") ?? "";
+  
   const walk = useMemo(
     () => buildCustomWalk(source, destination, 5),
     [source, destination]
   );
+  
   const personas = getPersonas();
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -65,5 +67,18 @@ export default function CustomWalkPage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function CustomWalkPage() {
+  return (
+    <Suspense fallback={
+      <div className="h-screen w-screen flex flex-col items-center justify-center bg-parchment gap-4">
+        <Loader2 className="w-8 h-8 animate-spin text-terracotta" />
+        <p className="eyebrow text-muted">Consulting the archives...</p>
+      </div>
+    }>
+      <CustomWalkContent />
+    </Suspense>
   );
 }
